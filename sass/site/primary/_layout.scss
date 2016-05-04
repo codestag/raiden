@@ -1,0 +1,50 @@
+.site {
+	max-width: 1230px;
+	@extend .clear;
+}
+.sidebar {
+	padding: 30px;
+
+	@include media(954px) {
+	    float: left;
+	    position: fixed;
+	    height: 100%;
+	    width: 400px;
+	    overflow: scroll;
+	}
+}
+
+.site-content {
+	max-width: 830px;
+
+	@include media(954px) {
+	    margin-left: 400px;
+	}
+}
+
+.content-area {
+	// padding: 0 30px;
+}
+
+.custom-logo-link {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.site-title {
+	@include rem(font-size, 29px);
+	font-weight: 900;
+	margin: 0 0 0 0;
+}
+
+.secondary,
+.site-header {
+	max-width: 270px;
+}
+
+.site-footer {
+	border-top: 2px solid #000;
+	font-size: 12px;
+	margin: 20px 0;
+	padding-top: 20px;
+}

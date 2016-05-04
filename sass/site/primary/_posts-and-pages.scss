@@ -2,8 +2,61 @@
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
+.post-tile {
+	background-size: cover;
+	background-position: center;
+	background-color: gray;
+	position: relative;
+
+	margin: 0;
+	overflow: hidden;
+	height: 400px;
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid black;
+
+	.entry-header {
+		display: table-cell;
+		vertical-align: bottom;
+		padding: 0 30px;
+		position: relative;
+	}
+
+	&.has-post-thumbnail {
+		color: #fff;
+		a {
+			color: inherit;
+		}
+	}
+
+	.link-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(black, .26);
+	}
+
+	.entry-title {
+		@include rem(font-size, 60px);
+		line-height: 1;
+		font-weight: 900;
+		margin: 0 0 20px;
+	}
+
+	.entry-meta {
+		display: inline-block;
+		background: #000;
+		color: #fff;
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 4px 8px;
+		a {
+			color: inherit;
+		}
+	}
 }
 
 .byline,

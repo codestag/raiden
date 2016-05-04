@@ -7,6 +7,18 @@
  * @package Raiden
  */
 
+/**
+ * The current version of the theme.
+ */
+define( 'RAIDEN_VERSION', '1.0.0' );
+
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 670; /* pixels */
+}
+
 if ( ! function_exists( 'raiden_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -34,6 +46,15 @@ function raiden_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+
+	/*
+	 * Enable support for custom logo.
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 270,
+		'width'       => 270,
+		'flex-height' => true,
+	) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -99,21 +120,60 @@ add_action( 'after_setup_theme', 'raiden_content_width', 0 );
  */
 function raiden_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'raiden' ),
+		'name'          => esc_html__( 'Widget Area', 'raiden' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'raiden' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'raiden' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'raiden_widgets_init' );
 
+if ( ! function_exists( 'raiden_fonts_url' ) ) :
+/**
+ * Register Google fonts for Raiden.
+ *
+ * Create your own raiden_fonts_url() function to override in a child theme.
+ *
+ * @since Raiden 1.0
+ *
+ * @return string Google fonts URL for the theme.
+ */
+function raiden_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+
+	/* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Roboto font: on or off', 'raiden' ) ) {
+		$fonts[] = 'Roboto:300,400,700,900,400italic,700italic,900italic';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'raiden' ) ) {
+		$fonts[] = 'Inconsolata:400';
+	}
+
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => urlencode( implode( '|', $fonts ) ),
+			'subset' => urlencode( $subsets ),
+		), 'https://fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+}
+endif;
+
 /**
  * Enqueue scripts and styles.
  */
 function raiden_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'raiden-fonts', raiden_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'raiden-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

@@ -18,7 +18,81 @@
 	table-layout: fixed;
 }
 
+.clear {
+	zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// Mixin to output Media Queries.
+//
+// Usage:
+//
+// @include media(500px){ …css stuff… }, will output - (min-width: 500px)
+// @include media(max-width 500px){ …css stuff… }, will output - (max-width: 500px)
+// @include media(max-width 500px min-width 800px){ …css stuff… }, will output - (max-width: 500px) and (min-width: 800px)
+//
+
+$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+
+@mixin media( $query: $feature $value ) {
+	@if length($query) == 1 {
+		@media screen and ($default-feature: nth($query, 1)) {
+			@content;
+		}
+	}
+
+	@else if length($query) == 2 {
+		@media screen and (nth($query, 1): nth($query, 2)) {
+			@content;
+		}
+	}
+
+	@else if length($query) == 4 {
+		@media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Wrong number of arguments for breakpoint(). Read the documentation for more details.";
+	}
+}
+
+$baseline-px: 16px;
+
+// Mixin to convert PX units to REM.
+//
+// @param $property CSS property which needs to be added.
+// @param $px-values PX value for the property.
+// @param $important Use '!important' when set to true. Optional.
+@mixin rem($property, $px-values) {
+	// Convert the baseline into rems
+	$baseline-rem: $baseline-px / 1rem;
+	// Print the first line in pixel values
+	#{$property}: $px-values;
+	// If there is only one (numeric) value, return the property/value line for it.
+	@if type-of($px-values) == "number" {
+		#{$property}: $px-values / $baseline-rem; }
+	@else {
+		// Create an empty list that we can dump values into
+		$rem-values: unquote("");
+		@each $value in $px-values {
+			// If the value is zero, return 0
+			@if $value == 0 {
+				$rem-values: append($rem-values, $value); }
+			@else {
+				$rem-values: append($rem-values, $value / $baseline-rem); } }
+		// Return the property and its list of converted values
+		#{$property}: $rem-values; } }

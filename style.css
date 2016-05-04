@@ -42,6 +42,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+.clear, .site {
+  zoom: 1;
+}
+.clear:before, .site:before, .clear:after, .site:after {
+  display: table;
+  content: "";
+}
+.clear:after, .site:after {
+  clear: both;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -149,7 +160,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 1em 0;
 }
 
 hr {
@@ -264,8 +275,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #000;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -293,7 +304,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: Inconsolata, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -304,7 +315,7 @@ pre {
 }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: Inconsolata, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
@@ -328,6 +339,7 @@ big {
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -504,13 +516,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #000;
+  text-decoration: none;
 }
 a:visited {
-  color: purple;
+  color: inherit;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #333333;
 }
 a:focus {
   outline: thin dotted;
@@ -523,67 +536,41 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 .main-navigation ul {
-  display: none;
-  list-style: none;
   margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
+  padding: 0;
 }
 .main-navigation li {
-  float: left;
-  position: relative;
+  display: block;
+  line-height: 1.7;
 }
 .main-navigation a {
-  display: block;
-  text-decoration: none;
+  padding: 9px;
+}
+.main-navigation .current_page_item {
+  background: #000;
+  color: #fff;
+}
+.main-navigation .current_page_item a:hover {
+  color: inherit;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
-  }
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
+  margin: 1.5em 0;
   overflow: hidden;
 }
 .comment-navigation .nav-previous,
@@ -662,8 +649,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
+.clear:before, .site:before,
 .clear:after,
+.site:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -679,7 +667,7 @@ a:hover, a:active {
   table-layout: fixed;
 }
 
-.clear:after,
+.clear:after, .site:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
@@ -692,16 +680,98 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 70px 0 30px 0;
+  margin:  4.375rem 0 1.875rem 0;
   /* Make sure select elements fit in widgets. */
+}
+.widget .widget-title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 20px;
+}
+.widget .widget-title:after {
+  content: '';
+  width: 68px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .widget select {
   max-width: 100%;
+}
+.widget .post-date {
+  display: block;
+  font-size: 13px;
+}
+.widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widget li {
+  display: block;
+  margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Site Layout
+--------------------------------------------------------------*/
+.site {
+  max-width: 1230px;
+}
+
+.sidebar {
+  padding: 30px;
+}
+@media screen and (min-width: 954px) {
+  .sidebar {
+    float: left;
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    overflow: scroll;
+  }
+}
+
+.site-content {
+  max-width: 830px;
+}
+@media screen and (min-width: 954px) {
+  .site-content {
+    margin-left: 400px;
+  }
+}
+
+.custom-logo-link {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.site-title {
+  font-size: 29px;
+  font-size: 1.8125rem;
+  font-weight: 900;
+  margin: 0 0 0 0;
+}
+
+.secondary,
+.site-header {
+  max-width: 270px;
+}
+
+.site-footer {
+  border-top: 2px solid #000;
+  font-size: 12px;
+  margin: 20px 0;
+  padding-top: 20px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -709,8 +779,56 @@ a:hover, a:active {
   display: block;
 }
 
-.hentry {
-  margin: 0 0 1.5em;
+.post-tile {
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  height: 400px;
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.post-tile .entry-header {
+  display: table-cell;
+  vertical-align: bottom;
+  padding: 0 30px;
+  position: relative;
+}
+.post-tile.has-post-thumbnail {
+  color: #fff;
+}
+.post-tile.has-post-thumbnail a {
+  color: inherit;
+}
+.post-tile .link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.26);
+}
+.post-tile .entry-title {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 900;
+  margin: 0 0 20px;
+}
+.post-tile .entry-meta {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+.post-tile .entry-meta a {
+  color: inherit;
 }
 
 .byline,
