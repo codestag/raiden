@@ -4,21 +4,23 @@
 }
 .sidebar {
 	padding: 30px;
+	background: #fff;
 
-	@include media(954px) {
+	@include media($breakpoint) {
 	    float: left;
 	    position: fixed;
 	    height: 100%;
-	    width: 400px;
+	    width: 330px;
 	    overflow: scroll;
 	}
 }
 
 .site-content {
 	max-width: 830px;
+	background: #fff;
 
-	@include media(954px) {
-	    margin-left: 400px;
+	@include media($breakpoint) {
+	    margin-left: 330px;
 	}
 }
 
@@ -39,7 +41,9 @@
 
 .secondary,
 .site-header {
-	max-width: 270px;
+	@include media($breakpoint) {
+		max-width: 270px;
+	}
 }
 
 .site-footer {

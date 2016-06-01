@@ -10,10 +10,12 @@
 
 	margin: 0;
 	overflow: hidden;
-	height: 400px;
 	display: table;
 	width: 100%;
 	border-bottom: 1px solid black;
+	padding-top: 39%;
+	padding-bottom: 50px;
+	max-height: 480px;
 
 	.entry-header {
 		display: table-cell;
@@ -39,7 +41,7 @@
 	}
 
 	.entry-title {
-		@include rem(font-size, 60px);
+		@include rem(font-size, 55px);
 		line-height: 1;
 		font-weight: 900;
 		margin: 0 0 20px;
@@ -54,12 +56,11 @@
 		font-weight: bold;
 		padding: 4px 8px;
 		a {
-			color: inherit;
+			color: $color__accent;
 		}
 	}
 }
 
-.byline,
 .updated:not(.published){
 	display: none;
 }

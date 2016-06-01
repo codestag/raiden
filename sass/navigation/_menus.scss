@@ -50,3 +50,21 @@
 		width: 50%;
 	}
 }
+
+.expand-menu {
+	-webkit-appearance: none;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	border: none;
+	padding: 12px 10px;
+	margin: 20px 0 50px;
+
+	@include media($breakpoint) {
+		display: none;
+	}
+
+	.genericon {
+		font-size: 1.8em;
+	}
+}

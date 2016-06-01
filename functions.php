@@ -171,6 +171,9 @@ endif;
  * Enqueue scripts and styles.
  */
 function raiden_scripts() {
+	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'raiden-fonts', raiden_fonts_url(), array(), null );
 
@@ -189,7 +192,7 @@ add_action( 'wp_enqueue_scripts', 'raiden_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

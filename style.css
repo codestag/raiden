@@ -1,6 +1,6 @@
 /*!
 Theme Name: Raiden
-Theme URI: http://underscores.me/
+Theme URI: https://codestag.com/themes/raiden/
 Author: Codestag
 Author URI: https://codestag.com
 Description: A responsive + retina ready theme with focus on readability.
@@ -415,22 +415,19 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
   background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  outline: 0;
 }
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 button:active, button:focus,
 input[type="button"]:active,
@@ -440,7 +437,6 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 input[type="text"],
@@ -459,9 +455,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
+  color: #333;
   border: 1px solid #ccc;
-  border-radius: 3px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -585,6 +580,24 @@ a:hover, a:active {
   float: right;
   text-align: right;
   width: 50%;
+}
+
+.expand-menu {
+  -webkit-appearance: none;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 12px 10px;
+  margin: 20px 0 50px;
+}
+@media screen and (min-width: 768px) {
+  .expand-menu {
+    display: none;
+  }
+}
+.expand-menu .genericon {
+  font-size: 1.8em;
 }
 
 /*--------------------------------------------------------------
@@ -728,23 +741,25 @@ a:hover, a:active {
 
 .sidebar {
   padding: 30px;
+  background: #fff;
 }
-@media screen and (min-width: 954px) {
+@media screen and (min-width: 768px) {
   .sidebar {
     float: left;
     position: fixed;
     height: 100%;
-    width: 400px;
+    width: 330px;
     overflow: scroll;
   }
 }
 
 .site-content {
   max-width: 830px;
+  background: #fff;
 }
-@media screen and (min-width: 954px) {
+@media screen and (min-width: 768px) {
   .site-content {
-    margin-left: 400px;
+    margin-left: 330px;
   }
 }
 
@@ -760,9 +775,11 @@ a:hover, a:active {
   margin: 0 0 0 0;
 }
 
-.secondary,
-.site-header {
-  max-width: 270px;
+@media screen and (min-width: 768px) {
+  .secondary,
+  .site-header {
+    max-width: 270px;
+  }
 }
 
 .site-footer {
@@ -786,10 +803,12 @@ a:hover, a:active {
   position: relative;
   margin: 0;
   overflow: hidden;
-  height: 400px;
   display: table;
   width: 100%;
   border-bottom: 1px solid black;
+  padding-top: 39%;
+  padding-bottom: 50px;
+  max-height: 480px;
 }
 .post-tile .entry-header {
   display: table-cell;
@@ -812,8 +831,8 @@ a:hover, a:active {
   background: rgba(0, 0, 0, 0.26);
 }
 .post-tile .entry-title {
-  font-size: 60px;
-  font-size: 3.75rem;
+  font-size: 55px;
+  font-size: 3.4375rem;
   line-height: 1;
   font-weight: 900;
   margin: 0 0 20px;
@@ -828,10 +847,9 @@ a:hover, a:active {
   padding: 4px 8px;
 }
 .post-tile .entry-meta a {
-  color: inherit;
+  color: #48dac0;
 }
 
-.byline,
 .updated:not(.published) {
   display: none;
 }
