@@ -350,8 +350,7 @@ html {
 }
 
 body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
+  background: #24252f;
 }
 
 blockquote, q {
@@ -413,14 +412,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  background: #33c5ab;
+  color: #fff;
+  text-transform: uppercase;
   font-size: 12px;
   font-size: 0.75rem;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
   line-height: 1;
-  padding: .6em 1em .4em;
   outline: 0;
 }
 button:hover,
@@ -511,7 +512,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000;
+  color: #00b796;
   text-decoration: none;
 }
 a:visited {
@@ -545,6 +546,7 @@ a:hover, a:active {
 }
 .main-navigation a {
   padding: 9px;
+  color: inherit;
 }
 .main-navigation .current_page_item {
   background: #000;
@@ -707,7 +709,7 @@ a:hover, a:active {
   content: '';
   width: 68px;
   height: 2px;
-  background: #000;
+  background: currentColor;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -741,7 +743,11 @@ a:hover, a:active {
 
 .sidebar {
   padding: 30px;
-  background: #fff;
+  background-color: #00b796;
+  color: #ffffff;
+}
+.sidebar a {
+  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .sidebar {
@@ -755,12 +761,17 @@ a:hover, a:active {
 
 .site-content {
   max-width: 830px;
-  background: #fff;
+  background: #ffffff;
+  color: #252323;
 }
 @media screen and (min-width: 768px) {
   .site-content {
     margin-left: 330px;
   }
+}
+
+.content-area {
+  padding: 15px;
 }
 
 .custom-logo-link {
@@ -799,13 +810,12 @@ a:hover, a:active {
 .post-tile {
   background-size: cover;
   background-position: center;
-  background-color: gray;
+  background-color: #f0f0f0;
   position: relative;
-  margin: 0;
+  margin: 0 0 15px 0;
   overflow: hidden;
   display: table;
   width: 100%;
-  border-bottom: 1px solid black;
   padding-top: 39%;
   padding-bottom: 50px;
   max-height: 480px;
@@ -820,6 +830,15 @@ a:hover, a:active {
   color: #fff;
 }
 .post-tile.has-post-thumbnail a {
+  color: inherit;
+}
+.post-tile:not(.has-post-thumbnail) {
+  color: #000;
+}
+.post-tile:not(.has-post-thumbnail) .entry-meta {
+  color: #838383;
+}
+.post-tile:not(.has-post-thumbnail) a {
   color: inherit;
 }
 .post-tile .link-overlay {
@@ -839,15 +858,10 @@ a:hover, a:active {
 }
 .post-tile .entry-meta {
   display: inline-block;
-  background: #000;
   color: #fff;
   font-size: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 4px 8px;
-}
-.post-tile .entry-meta a {
-  color: #48dac0;
 }
 
 .updated:not(.published) {

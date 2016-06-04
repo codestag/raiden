@@ -1,5 +1,5 @@
 a {
-	color: $color__link;
+	color: map-get($scheme, 'link-color');
 	text-decoration: none;
 
 	&:visited {

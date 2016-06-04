@@ -5,14 +5,13 @@
 .post-tile {
 	background-size: cover;
 	background-position: center;
-	background-color: gray;
+	background-color: #f0f0f0;
 	position: relative;
 
-	margin: 0;
+	margin: 0 0 15px 0;
 	overflow: hidden;
 	display: table;
 	width: 100%;
-	border-bottom: 1px solid black;
 	padding-top: 39%;
 	padding-bottom: 50px;
 	max-height: 480px;
@@ -26,6 +25,16 @@
 
 	&.has-post-thumbnail {
 		color: #fff;
+		a {
+			color: inherit;
+		}
+	}
+
+	&:not(.has-post-thumbnail) {
+		color: #000;
+		.entry-meta {
+			color: #838383;
+		}
 		a {
 			color: inherit;
 		}
@@ -49,15 +58,10 @@
 
 	.entry-meta {
 		display: inline-block;
-		background: #000;
 		color: #fff;
 		font-size: 10px;
 		text-transform: uppercase;
 		font-weight: bold;
-		padding: 4px 8px;
-		a {
-			color: $color__accent;
-		}
 	}
 }
 

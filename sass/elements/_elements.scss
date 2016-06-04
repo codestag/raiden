@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: map-get($scheme, 'body-background');
 }
 
 blockquote, q {

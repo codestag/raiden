@@ -4,7 +4,12 @@
 }
 .sidebar {
 	padding: 30px;
-	background: #fff;
+	background-color: map-get($scheme, 'sidebar-background');
+	color: map-get($scheme, 'sidebar-text');
+
+	a {
+		color: inherit;
+	}
 
 	@include media($breakpoint) {
 	    float: left;
@@ -17,7 +22,8 @@
 
 .site-content {
 	max-width: 830px;
-	background: #fff;
+	background: map-get($scheme, 'content-background');
+	color: map-get($scheme, 'content-text');
 
 	@include media($breakpoint) {
 	    margin-left: 330px;
@@ -25,7 +31,7 @@
 }
 
 .content-area {
-	// padding: 0 30px;
+	padding: 15px;
 }
 
 .custom-logo-link {

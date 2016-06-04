@@ -93,9 +93,10 @@ function raiden_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
+	$color_scheme = raiden_get_color_scheme();
+	$default_background_color = trim( $color_scheme[0], '#' );
 	add_theme_support( 'custom-background', apply_filters( 'raiden_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
+		'default-color' => $default_background_color,
 	) ) );
 }
 endif;
@@ -190,6 +191,35 @@ function raiden_scripts() {
 add_action( 'wp_enqueue_scripts', 'raiden_scripts' );
 
 /**
+ * Converts a HEX value to RGB.
+ *
+ * @since Raiden 1.0
+ *
+ * Borrowed from Twenty Sixteen.
+ *
+ * @param string $color The original color, in 3- or 6-digit hexadecimal form.
+ * @return array Array containing RGB (red, green, and blue) values for the given
+ *               HEX code, empty array otherwise.
+ */
+function raiden_hex2rgb( $color ) {
+	$color = trim( $color, '#' );
+
+	if ( strlen( $color ) === 3 ) {
+		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+	} else if ( strlen( $color ) === 6 ) {
+		$r = hexdec( substr( $color, 0, 2 ) );
+		$g = hexdec( substr( $color, 2, 2 ) );
+		$b = hexdec( substr( $color, 4, 2 ) );
+	} else {
+		return array();
+	}
+
+	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+}
+
+/**
  * Implement the Custom Header feature.
  */
 // require get_template_directory() . '/inc/custom-header.php';
@@ -213,3 +243,4 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
