@@ -19,6 +19,7 @@ function raiden_jetpack_setup() {
 		'container' => 'main',
 		'render'    => 'raiden_infinite_scroll_render',
 		'footer'    => 'page',
+		'wrapper'   => 'false',
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -39,3 +40,17 @@ function raiden_infinite_scroll_render() {
 		endif;
 	}
 }
+
+if ( ! function_exists( 'raiden_remove_jetpack_share' ) ) :
+/**
+ * Remove default output of Jetpack Sharing buttons.
+ *
+ * @return void
+ */
+function raiden_remove_jetpack_share() {
+	remove_filter( 'the_content', 'sharing_display', 19 );
+	remove_filter( 'the_excerpt', 'sharing_display', 19 );
+}
+endif;
+
+add_action( 'loop_start', 'raiden_remove_jetpack_share' );

@@ -115,6 +115,27 @@ function raiden_customize_register( $wp_customize ) {
 		'label'       => esc_html__( 'Button Color', 'raiden' ),
 		'section'     => 'raiden_color_schemes',
 	) ) );
+
+	// Site Layout Settings Panel
+	$wp_customize->add_section( 'raiden_site_layout_settings', array(
+		'title' => esc_html__( 'Site Layout', 'raiden' ),
+		'panel' => 'raiden_options_panel',
+	) );
+
+	// Site Layout Settings
+	$wp_customize->add_setting( 'site_layout', array(
+		'default'   => 'layout-one',
+		'transport' => 'postMessage',
+	) );
+	$wp_customize->add_control( new WP_Customize_Layout_Control( $wp_customize, 'site_layout', array(
+		'label'       => esc_html__( 'Site Layout', 'raiden' ),
+		'choices'   => array(
+			'layout-one'    => '1-1-1-1',
+			'layout-odd'    => '1-2-1-2',
+			'layout-one-ex' => '1-excerpt',
+		),
+		'section'     => 'raiden_site_layout_settings',
+	) ) );
 }
 add_action( 'customize_register', 'raiden_customize_register' );
 
@@ -380,3 +401,40 @@ function raiden_color_scheme_css_template() {
 	<?php
 }
 add_action( 'customize_controls_print_footer_scripts', 'raiden_color_scheme_css_template' );
+
+if ( ! function_exists( 'raiden_customizer_layout_control' ) ) :
+/**
+ * Layout Picker Control
+ *
+ * Attach the custom layout picker control to the `customize_register` action
+ * so the WP_Customize_Control class is initiated.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ * @return void
+ */
+function raiden_customizer_layout_control( $wp_customize ) {
+	class WP_Customize_Layout_Control extends WP_Customize_Control {
+		public $type = 'layout';
+
+		public function render_content() {
+			?>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<ul>
+			<?php
+
+			foreach ( $this->choices as $key => $value ) {
+				?>
+				<li class="customizer-control-row">
+					<input type="radio" value="<?php echo esc_attr( $key ) ?>" name="<?php echo $this->id; ?>" <?php echo $this->link(); ?> <?php if ( $this->value() === $key ) echo 'checked="checked"'; ?>>
+					<label for="<?php echo $this->id;  ?>[key]"><?php echo $value; ?></label>
+				</li>
+				<?php
+			}
+
+			?> </ul> <?php
+		}
+	}
+}
+endif; // raiden_customizer_layout_control
+
+add_action( 'customize_register', 'raiden_customizer_layout_control', 1, 1 );

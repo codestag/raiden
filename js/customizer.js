@@ -53,4 +53,11 @@
 			style.html( css );
 		} );
 	} );
+
+	api( 'site_layout', function( value ) {
+		value.bind( function( to ) {
+			var $classes = 'layout-one layout-odd layout-one-ex';
+			$('body').removeClass( $classes ).addClass( to );
+		} );
+	} );
 } )( jQuery );

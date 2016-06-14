@@ -17,26 +17,17 @@
 		padding: 9px;
 		color: inherit;
 	}
-
-	.current_page_item {
-		background: #000;
-		color: #fff;
-		a:hover {
-			color: inherit;
-		}
-	}
 }
 
 
 .comment-navigation,
-.posts-navigation,
-.post-navigation {
+.posts-navigation {
 	@include rem(font-size, 15px);
 	font-weight: bold;
 	text-transform: uppercase;
 
 	.site-main & {
-		margin: 1.5em 0;
+		margin: 1.5em auto;
 		overflow: hidden;
 	}
 
@@ -67,5 +58,64 @@
 
 	.genericon {
 		font-size: 1.8em;
+	}
+}
+
+.post-navigation {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	@include rem(font-size, 15px);
+	font-weight: bold;
+	text-transform: uppercase;
+
+	a {
+		color: inherit;
+	}
+
+	.meta-nav {
+		font-size: 10px;
+	}
+	.post-title {
+		margin-top: 10px;
+	}
+}
+.entry-footer + .post-navigation {
+	border-top: none;
+}
+
+.nav-links {
+	@extend .clear;
+	padding: 20px 0;
+
+	@include media($breakpoint) {
+		padding: 0;
+		display: flex;
+		align-items: stretch;
+		align-content: stretch;
+
+		.nav-link {
+			width: 50%;
+			float: left;
+			padding: 50px 0;
+			display: flex;
+			align-items: center;
+
+			> a {
+				display: inline-block;
+				max-width: 270px;
+			}
+
+			&:only-of-type {
+			    width: auto;
+			    border: none;
+			}
+		}
+		.nav-next {
+			border-left: 2px solid #000;
+			justify-content: flex-end;
+			> a {
+				float: right;
+			}
+		}
 	}
 }

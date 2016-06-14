@@ -4,3 +4,48 @@
 .bypostauthor {
 	display: block;
 }
+
+.comment-respond {
+	input:not([type="submit"]) {
+		width: 100%;
+	}
+}
+
+@include media($breakpoint) {
+	.comment-form-author,
+	.comment-form-email {
+		width: 49%;
+		display: inline-block;
+		margin-left: -.25em;
+	}
+	.comment-form-author {
+		margin-right: 2%;
+	}
+}
+
+.comments-area {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.comment-reply-title {
+	margin: 0;
+
+	@include media($breakpoint) {
+		font-size: 28px;
+	}
+}
+
+.comment-list {
+	padding: 0 0 50px;
+	margin: 0 0 50px;
+	list-style: none;
+	border-bottom: 2px solid #000;
+}
+
+.comment {
+	.avatar {
+		max-width: 70px;
+		border-radius: 50%;
+	}
+}

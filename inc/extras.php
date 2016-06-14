@@ -19,6 +19,12 @@ function raiden_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	// Site Layout
+	$layout = get_theme_mod( 'site_layout', 'layout-one' );
+	if ( ! empty( $layout ) ) {
+		$classes[] = esc_attr( $layout );
+	}
+
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';

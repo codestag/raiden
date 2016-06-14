@@ -16,7 +16,7 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-
+	background: #f8f8f8;
 	&:focus {
 		color: $color__text-input-focus;
 	}
@@ -41,10 +41,18 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 3px;
+	padding: 12px 10px;
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+label {
+	@include rem(font-size, 15px);
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 4px;
 }
