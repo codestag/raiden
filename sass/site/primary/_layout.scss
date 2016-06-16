@@ -61,7 +61,9 @@
 }
 
 
-.home {
+.home,
+.archive,
+.search {
 	&.layout-odd {
 		.site-main {
 			display: -webkit-box;
@@ -90,5 +92,65 @@
 				flex: 0 1 100%;
 			}
 		}
+	}
+
+	&.layout-one-ex {
+		.entry-meta {
+			background: map-get($scheme, 'link-color');
+			color: #fff;
+			font-size: 10px;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 7px 10px;
+			width: auto;
+			display: inline-block;
+			a {
+				color: inherit;
+			}
+		}
+
+		.content-wrap {
+			max-width: 670px;
+			border-bottom: 2px solid #000;
+			padding-bottom: 40px;
+			margin: 0 auto 40px auto;
+		}
+
+		.hentry:last-of-type {
+			.content-wrap {
+				margin-bottom: 0;
+				border: none;
+			}
+		}
+
+		.entry-content {
+			margin: 0;
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.post-thumbnail {
+			margin: 0;
+		}
+
+		.has-post-thumbnail {
+			.content-wrap {
+				margin-top: -15px;
+			}
+		}
+
+		.entry-title {
+			@include rem(font-size, 35px);
+			line-height: 1;
+			font-weight: 900;
+			margin: 40px 0;
+			cursor: pointer;
+
+			@include media($breakpoint) {
+				@include rem(font-size, 55px);
+			}
+		}
+
 	}
 }

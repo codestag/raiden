@@ -7,25 +7,13 @@
  * @package Raiden
  */
 
-$thumbnail_url = get_the_post_thumbnail_url();
-?>
+// Determine site layout and return correct template.
+$layout = get_theme_mod( 'site_layout', 'layout-one' );
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tile' ); ?> <?php if ( has_post_thumbnail() ) echo 'style="background-image:url('. esc_url( $thumbnail_url ) .')"'; ?>>
+if ( 'layout-one-ex' == $layout ) {
+	$template = 'layout-excerpt';
+} else {
+	$template = 'layout-simple';
+}
 
-	<a href="<?php the_permalink(); ?>">
-	<div class="link-overlay"></div>
-	</a>
-
-	<header class="entry-header">
-		<?php
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php raiden_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-</article><!-- #post-## -->
+get_template_part( 'template-parts/content', esc_attr( $template ) );

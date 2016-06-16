@@ -125,7 +125,7 @@ function raiden_customize_register( $wp_customize ) {
 	// Site Layout Settings
 	$wp_customize->add_setting( 'site_layout', array(
 		'default'   => 'layout-one',
-		'transport' => 'postMessage',
+		'transport' => 'refresh',
 	) );
 	$wp_customize->add_control( new WP_Customize_Layout_Control( $wp_customize, 'site_layout', array(
 		'label'       => esc_html__( 'Site Layout', 'raiden' ),
@@ -355,6 +355,9 @@ function raiden_get_color_scheme_css( $colors ) {
 	/* Link Color */
 	a {
 		color: {$colors['link_color']};
+	}
+	.layout-one-ex .entry-meta {
+		background-color: {$colors['link_color']} !important;
 	}
 
 	/* Button Color */
