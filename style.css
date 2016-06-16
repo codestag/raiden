@@ -858,7 +858,9 @@ a:hover, a:active {
   padding-top: 20px;
 }
 
-.home.layout-odd .site-main {
+.home.layout-odd .site-main,
+.archive.layout-odd .site-main,
+.search.layout-odd .site-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -866,18 +868,24 @@ a:hover, a:active {
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.home.layout-odd .hentry {
+.home.layout-odd .hentry,
+.archive.layout-odd .hentry,
+.search.layout-odd .hentry {
   position: relative;
 }
 @media screen and (min-width: 1000px) {
-  .home.layout-odd .hentry {
+  .home.layout-odd .hentry,
+  .archive.layout-odd .hentry,
+  .search.layout-odd .hentry {
     -webkit-box-flex: 0 1 49%;
     -webkit-flex: 0 1 49%;
     -ms-flex: 0 1 49%;
     flex: 0 1 49%;
   }
 }
-.home.layout-odd .hentry:nth-child(3n+1) {
+.home.layout-odd .hentry:nth-child(3n+1),
+.archive.layout-odd .hentry:nth-child(3n+1),
+.search.layout-odd .hentry:nth-child(3n+1) {
   -webkit-box-flex: 0 1 100%;
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
@@ -1042,6 +1050,10 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-title {
+  margin-bottom: 50px;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
@@ -1087,9 +1099,56 @@ a:hover, a:active {
   border-bottom: 2px solid #000;
 }
 
+.comment .children {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .comment .children {
+    padding: 0 0 0 100px;
+  }
+}
 .comment .avatar {
   max-width: 70px;
   border-radius: 50%;
+  float: left;
+  margin-right: 30px;
+}
+.comment .comment-author {
+  text-transform: uppercase;
+  color: #252323;
+}
+.comment .comment-body:after {
+  display: block;
+  width: 77px;
+  height: 2px;
+  margin: 40px 0 40px 100px;
+  background: #000;
+  content: "";
+}
+.comment a {
+  color: inherit;
+}
+.comment .says {
+  text-transform: lowercase;
+}
+.comment .comment-metadata {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.comment-content {
+  padding-left: 100px;
+}
+
+.comment-reply-link {
+  padding-left: 100px;
+  color: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
