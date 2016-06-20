@@ -47,6 +47,10 @@ if ( has_post_thumbnail() ) $post_classes .= ' has-post-thumbnail';
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raiden' ),
 				'after'  => '</div>',
 			) );
+
+			if ( '' !== get_the_author_meta( 'description' ) ) {
+				get_template_part( 'template-parts/biography' );
+			}
 		?>
 	</div><!-- .entry-content -->
 

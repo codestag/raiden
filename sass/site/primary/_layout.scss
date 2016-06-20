@@ -65,14 +65,20 @@
 .archive,
 .search {
 	&.layout-odd {
-		.site-main {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
+		@include media(1000px) {
+			.site-main {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
 
-			flex-flow: row wrap;
-			justify-content: space-between;
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+
+			.post-tile {
+				height: 450px;
+			}
 		}
 
 		.hentry {
@@ -83,14 +89,15 @@
 				-webkit-flex: 0 1 49%;
 				-ms-flex: 0 1 49%;
 				flex: 0 1 49%;
+
+				&:nth-child(3n+1) {
+					-webkit-box-flex: 0 1 100%;
+					-webkit-flex: 0 1 100%;
+					-ms-flex: 0 1 100%;
+					flex: 0 1 100%;
+				}
 			}
 
-			&:nth-child(3n+1) {
-				-webkit-box-flex: 0 1 100%;
-				-webkit-flex: 0 1 100%;
-				-ms-flex: 0 1 100%;
-				flex: 0 1 100%;
-			}
 		}
 	}
 

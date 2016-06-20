@@ -16,6 +16,13 @@ get_header(); ?>
 			<h1 class="page-title">
 				<?php echo raiden_the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</h1>
+
+			<?php if ( is_author() ) : ?>
+				<div class="author-description">
+					<?php the_author_meta( 'description' ); ?>
+				</div>
+			<?php endif; ?>
+
 			<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 		</header><!-- .page-header -->
 		<?php endif; ?>
