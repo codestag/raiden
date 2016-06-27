@@ -18,14 +18,14 @@ function raiden_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	/**
-	 * Add the Theme Options section
+	 * Add the Theme Options section.
 	 */
 	$wp_customize->add_panel( 'raiden_options_panel', array(
 		'title'       => esc_html__( 'Theme Options', 'raiden' ),
 		'description' => esc_html__( 'Configure your theme settings', 'raiden' ),
 	) );
 
-	// Color Schemes Settings
+	// Color Schemes Settings.
 	$wp_customize->add_section( 'raiden_color_schemes', array(
 		'title' => esc_html__( 'Color Schemes', 'raiden' ),
 		'panel' => 'raiden_options_panel',
@@ -116,13 +116,13 @@ function raiden_customize_register( $wp_customize ) {
 		'section'     => 'raiden_color_schemes',
 	) ) );
 
-	// Site Layout Settings Panel
+	// Site Layout Settings Panel.
 	$wp_customize->add_section( 'raiden_site_layout_settings', array(
 		'title' => esc_html__( 'Site Layout', 'raiden' ),
 		'panel' => 'raiden_options_panel',
 	) );
 
-	// Site Layout Settings
+	// Site Layout Settings.
 	$wp_customize->add_setting( 'site_layout', array(
 		'default'   => 'layout-one',
 		'transport' => 'refresh',

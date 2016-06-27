@@ -10,7 +10,7 @@
 $thumbnail_url = get_the_post_thumbnail_url();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tile' ); ?> <?php if ( has_post_thumbnail() ) echo 'style="background-image:url('. esc_url( $thumbnail_url ) .')"'; ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tile' ); ?> <?php if ( has_post_thumbnail() ) echo 'style="background-image:url(' . esc_url( $thumbnail_url ) . ')"'; ?>>
 
 	<a href="<?php the_permalink(); ?>">
 	<div class="link-overlay"></div>

@@ -1,5 +1,7 @@
 <?php
 /**
+ * Post Meta.
+ *
  * @package Raiden
  */
 

@@ -33,7 +33,7 @@ get_header(); ?>
 						'ignore_sticky_posts' => true,
 					) );
 
-					if ( $q->have_posts() ):
+					if ( $q->have_posts() ) :
 						echo '<ul class="custom-widget custom-post-list">';
 
 						while ( $q->have_posts() ) : $q->the_post(); ?>

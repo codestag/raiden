@@ -4,6 +4,7 @@
  *
  * @package Raiden
  */
+
 ?>
 
 <div class="author-info">
