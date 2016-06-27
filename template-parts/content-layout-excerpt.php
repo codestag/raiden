@@ -31,11 +31,11 @@ $thumbnail_url = get_the_post_thumbnail_url();
 
 		<div class="entry-content">
 			<?php
-				/* translators: %s: Name of current post */
 				the_content( sprintf(
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raiden' ),
-					get_the_title()
-				) );
+				/* translators: %s: Name of current post. */
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'raiden' ), array( 'span' => array( 'class' => array() ) ) ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
 
 				wp_link_pages( array(
 					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'raiden' ) . '</span>',

@@ -411,6 +411,7 @@ table {
 # Forms
 --------------------------------------------------------------*/
 button,
+.stag-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -427,12 +428,15 @@ input[type="submit"] {
   outline: 0;
 }
 button:hover,
+.stag-button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 button:active, button:focus,
+.stag-button:active,
+.stag-button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -440,6 +444,10 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
+}
+
+.stag-button {
+  color: #fff !important;
 }
 
 input[type="text"],
@@ -797,6 +805,14 @@ a:hover, a:active {
   margin-bottom: 10px;
 }
 
+.stag-flickr-widget ul {
+  list-style: none;
+}
+.stag-flickr-widget li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -885,6 +901,12 @@ a:hover, a:active {
     height: 450px;
   }
 }
+.home.layout-odd .entry-title,
+.archive.layout-odd .entry-title,
+.search.layout-odd .entry-title {
+  font-size: 35px;
+  font-size: 2.1875rem;
+}
 .home.layout-odd .hentry,
 .archive.layout-odd .hentry,
 .search.layout-odd .hentry {
@@ -908,6 +930,15 @@ a:hover, a:active {
     flex: 0 1 100%;
   }
 }
+@media screen and (min-width: 1000px) and (min-width: 768px) {
+  .home.layout-odd .hentry:nth-child(3n+1) .entry-title,
+  .archive.layout-odd .hentry:nth-child(3n+1) .entry-title,
+  .search.layout-odd .hentry:nth-child(3n+1) .entry-title {
+    font-size: 55px;
+    font-size: 3.4375rem;
+  }
+}
+
 .home.layout-one-ex .entry-meta,
 .archive.layout-one-ex .entry-meta,
 .search.layout-one-ex .entry-meta {
@@ -969,6 +1000,11 @@ a:hover, a:active {
   margin: 40px 0;
   cursor: pointer;
 }
+.home.layout-one-ex .entry-title a,
+.archive.layout-one-ex .entry-title a,
+.search.layout-one-ex .entry-title a {
+  color: inherit;
+}
 @media screen and (min-width: 768px) {
   .home.layout-one-ex .entry-title,
   .archive.layout-one-ex .entry-title,
@@ -976,6 +1012,13 @@ a:hover, a:active {
     font-size: 55px;
     font-size: 3.4375rem;
   }
+}
+
+.more-link {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -1031,7 +1074,7 @@ a:hover, a:active {
   font-size: 3.4375rem;
   line-height: 1;
   font-weight: 900;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 .post-tile .entry-meta {
   display: inline-block;
