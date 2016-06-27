@@ -10,7 +10,7 @@
 if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
 
 	<button class="expand-menu">
-		<span class="genericon genericon-menu"></span>
+		<span class="button-text"><?php _e( 'Menu and widgets', 'raiden' ); ?></span>
 	</button>
 
 	<div id="secondary" class="secondary">

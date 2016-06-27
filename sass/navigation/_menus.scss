@@ -1,5 +1,5 @@
 .main-navigation {
-	margin: 0;
+	margin: 50px 0 0;
 	padding: 0;
 	text-transform: uppercase;
 
@@ -50,7 +50,44 @@
 	width: 100%;
 	border: none;
 	padding: 12px 10px;
-	margin: 20px 0 50px;
+	margin: 20px 0 20px;
+	height: 40px;
+	position: relative;
+
+	&:before {
+		color: #333;
+		content: "\f419";
+		line-height: 40px;
+		width: 40px;
+
+		-moz-osx-font-smoothing: grayscale;
+	    -webkit-font-smoothing: antialiased;
+	    display: inline-block;
+	    font-family: "Genericons";
+	    font-size: 16px;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    line-height: 1;
+	    speak: none;
+	    color: #fff;
+	    text-align: center;
+	    text-decoration: inherit;
+	    text-transform: none;
+	    vertical-align: top;
+	}
+
+	&.toggled-on:before {
+		content: "\f405";
+		font-size: 28px;
+		position: relative;
+		top: -6px;
+		left: -1px;
+	}
+
+	.button-text {
+		@extend .screen-reader-text;
+	}
 
 	@include media($breakpoint) {
 		display: none;

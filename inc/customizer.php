@@ -393,6 +393,10 @@ function raiden_get_color_scheme_css( $colors ) {
 		background-color: {$colors['sidebar_background_color']};
 		color: {$colors['sidebar_text_color']};
 	}
+	.author-info {
+		background-color: {$colors['sidebar_background_color']};
+		color: {$colors['sidebar_text_color']};
+	}
 
 	/* Content Text & Background Color */
 	.site-content {

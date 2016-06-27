@@ -15,7 +15,16 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'single' );
+			// Determine site layout and return correct template.
+			$layout = get_theme_mod( 'site_layout', 'layout-one' );
+
+			if ( 'layout-one-ex' == $layout ) {
+				$template = 'layout-excerpt';
+			} else {
+				$template = 'single';
+			}
+
+			get_template_part( 'template-parts/content', esc_attr( $template ) );
 
 			raiden_post_navigation();
 
