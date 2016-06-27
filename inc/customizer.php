@@ -477,7 +477,31 @@ function raiden_customizer_layout_control( $wp_customize ) {
 				?>
 				<li class="customizer-control-row">
 					<input type="radio" value="<?php echo esc_attr( $key ) ?>" name="<?php echo $this->id; ?>" <?php echo $this->link(); ?> <?php if ( $this->value() === $key ) echo 'checked="checked"'; ?>>
-					<label for="<?php echo $this->id;  ?>[key]"><?php echo $value; ?></label>
+					<label for="<?php echo $this->id;  ?>[key]">
+
+						<?php if ( '1-1-1-1' === $value ) : ?>
+						<svg width="80px" height="62px" viewBox="342 413 80 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <path d="M342,413 L422,413 L422,427 L342,427 L342,413 Z M342,429 L422,429 L422,443 L342,443 L342,429 Z M342,445 L422,445 L422,459 L342,459 L342,445 Z M342,461 L422,461 L422,475 L342,475 L342,461 Z" id="Combined-Shape" stroke="none" fill="#D8D8D8" fill-rule="evenodd"></path>
+						</svg>
+
+						<?php elseif ( '1-2-1-2' === $value ) : ?>
+						<svg width="81px" height="62px" viewBox="0 0 81 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Group-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Group" fill="#D8D8D8">
+						            <path d="M0,0 L80,0 L80,14 L0,14 L0,0 Z M0,32 L80,32 L80,46 L0,46 L0,32 Z M0,16 L39,16 L39,30 L0,30 L0,16 Z M41,16 L80,16 L80,30 L41,30 L41,16 Z M0,48 L39,48 L39,62 L0,62 L0,48 Z M41,48 L80,48 L80,62 L41,62 L41,48 Z" id="Combined-Shape"></path>
+						        </g>
+						    </g>
+						</svg>
+
+						<?php elseif ( '1-excerpt' === $value ) : ?>
+						<svg width="80px" height="62px" viewBox="546 413 80 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Group-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(546.000000, 413.000000)">
+						        <path d="M0,0 L80,0 L80,14 L0,14 L0,0 Z M20,16 L60,16 L60,19 L20,19 L20,16 Z M20,48 L60,48 L60,51 L20,51 L20,48 Z M20,22 L60,22 L60,25 L20,25 L20,22 Z M20,54 L60,54 L60,57 L20,57 L20,54 Z M20,27 L60,27 L60,30 L20,30 L20,27 Z M20,59 L60,59 L60,62 L20,62 L20,59 Z M0,32 L80,32 L80,46 L0,46 L0,32 Z" id="Combined-Shape" fill="#D8D8D8"></path>
+						    </g>
+						</svg>
+						<?php endif; ?>
+
+					</label>
 				</li>
 				<?php
 			}
@@ -489,3 +513,46 @@ function raiden_customizer_layout_control( $wp_customize ) {
 endif; // raiden_customizer_layout_control
 
 add_action( 'customize_register', 'raiden_customizer_layout_control', 1, 1 );
+
+if ( ! function_exists( 'blink_customizer_layout_css' ) ) :
+/**
+ * Add CSS for customizer layout picker.
+ *
+ * @return void
+ */
+function blink_customizer_layout_css() {
+	?>
+
+	<style type="text/css">
+		.customizer-control-row {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.customizer-control-row input[type="radio"] {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+		.customizer-control-row input,
+		.customizer-control-row label {
+			width: 100%;
+		}
+		.customizer-control-row label {
+			height: 75px;
+			display: block;
+			box-sizing: border-box;
+		}
+
+		.customizer-control-row input[type="radio"]:checked + label path {
+			fill: #a9a9a9;
+		}
+	</style>
+
+	<?php
+}
+endif;
+
+add_action( 'customize_controls_print_scripts', 'blink_customizer_layout_css' );
