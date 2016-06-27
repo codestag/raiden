@@ -554,7 +554,7 @@ a:hover, a:active {
   line-height: 1.7;
 }
 .main-navigation a {
-  padding: 9px;
+  padding: 9px 0;
   color: inherit;
 }
 
@@ -823,6 +823,11 @@ a:hover, a:active {
     width: 330px;
     overflow: scroll;
   }
+}
+.sidebar .search-field {
+  border: none;
+  width: 100%;
+  outline: 0;
 }
 
 .site-content {
