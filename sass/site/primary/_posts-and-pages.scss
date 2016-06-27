@@ -93,7 +93,7 @@
 .comments-area,
 .secondary-post-meta,
 .entry-footer {
-	max-width: 670px;
+	max-width: $content_width;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -162,7 +162,7 @@
 .archive,
 .page-template-custom-archives {
 	.page-header {
-		max-width: 670px;
+		max-width: $content_width;
 		margin: 0 auto;
 		&:after {
 			display: block;
@@ -233,7 +233,7 @@
 }
 
 .custom-archive-widgets {
-	max-width: 670px;
+	max-width: $content_width;
 	margin: 0 auto;
 
 	.widget-title {
