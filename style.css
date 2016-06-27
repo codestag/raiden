@@ -824,6 +824,7 @@ a:hover, a:active {
 .widget .post-date {
   display: block;
   font-size: 13px;
+  opacity: .8;
 }
 .widget ul {
   margin: 0;
@@ -870,6 +871,9 @@ a:hover, a:active {
   border: none;
   width: 100%;
   outline: 0;
+}
+.sidebar .search-submit {
+  display: none;
 }
 
 .site-content {
@@ -924,6 +928,17 @@ a:hover, a:active {
   font-size: 12px;
   margin: 20px auto;
   padding-top: 20px;
+}
+
+.home.layout-one-ex .entry-content,
+.archive.layout-one-ex .entry-content,
+.search.layout-one-ex .entry-content {
+  margin: 0;
+}
+.home.layout-one-ex .entry-content p:last-child,
+.archive.layout-one-ex .entry-content p:last-child,
+.search.layout-one-ex .entry-content p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -989,12 +1004,6 @@ a:hover, a:active {
 .layout-one-ex .hentry:last-of-type .content-wrap {
   margin-bottom: 0;
   border: none;
-}
-.layout-one-ex .entry-content {
-  margin: 0;
-}
-.layout-one-ex .entry-content p:last-child {
-  margin-bottom: 0;
 }
 .layout-one-ex .post-thumbnail {
   margin: 0;
@@ -1243,6 +1252,7 @@ a:hover, a:active {
   white-space: nowrap;
   display: block;
   margin-top: 5px;
+  color: inherit;
 }
 
 .custom-archive-widgets {
