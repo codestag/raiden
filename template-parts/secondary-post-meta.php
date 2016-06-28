@@ -19,7 +19,7 @@ if ( ! $tags_list && ! $sharing ) return;
 			<div class="post-tags">
 				<?php
 					printf(
-						esc_html__( 'Tags: %1$s', 'mono' ),
+						esc_html__( 'Tags: %1$s', 'raiden' ),
 						$tags_list
 					);
 				?>

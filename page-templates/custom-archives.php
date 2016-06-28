@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<section class="custom-archive-widgets">
 				<div class="archive-widget custom-recent-posts">
-					<h2 class="widget-title"><?php esc_attr_e( 'Latest Posts', 'mono' ); ?></h2>
+					<h2 class="widget-title"><?php esc_attr_e( 'Latest Posts', 'raiden' ); ?></h2>
 
 					<?php
 

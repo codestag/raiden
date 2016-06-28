@@ -124,8 +124,9 @@ function raiden_customize_register( $wp_customize ) {
 
 	// Site Layout Settings.
 	$wp_customize->add_setting( 'site_layout', array(
-		'default'   => 'layout-one',
-		'transport' => 'refresh',
+		'default'           => 'layout-one',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'raiden_sanitize_layout',
 	) );
 	$wp_customize->add_control( new WP_Customize_Layout_Control( $wp_customize, 'site_layout', array(
 		'label'       => esc_html__( 'Site Layout', 'raiden' ),
@@ -563,3 +564,18 @@ function blink_customizer_layout_css() {
 endif;
 
 add_action( 'customize_controls_print_scripts', 'blink_customizer_layout_css' );
+
+if ( ! function_exists( 'raiden_sanitize_layout' ) ) :
+/**
+ * Sanitize customizer options for layout selector.
+ *
+ * @return void
+ */
+function raiden_sanitize_layout( $value ) {
+	if ( ! array_key_exists( $value, array( 'layout-one', 'layout-odd', 'layout-one-ex' ) ) ) {
+		$value = 'layout-one';
+	}
+
+	return $value;
+}
+endif; // raiden_sanitize_layout.

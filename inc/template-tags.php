@@ -140,45 +140,45 @@ endif; // raiden_post_navigation
 
 function raiden_the_archive_title() {
 	if ( is_category() ) {
-		$title = sprintf( __( '<span>Category:</span> %s' ), single_cat_title( '', false ) );
+		$title = sprintf( __( '<span>Category:</span> %s', 'raiden' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( '<span>Tag:</span> %s' ), single_tag_title( '', false ) );
+		$title = sprintf( __( '<span>Tag:</span> %s', 'raiden' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( '<span>Author:</span> %s' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( '<span>Author:</span> %s', 'raiden' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( '<span>Year:</span> %s' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
+		$title = sprintf( __( '<span>Year:</span> %s', 'raiden' ), get_the_date( _x( 'Y', 'yearly archives date format', 'raiden' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( '<span>Month:</span> %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
+		$title = sprintf( __( '<span>Month:</span> %s', 'raiden' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'raiden' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( '<span>Day:</span> %s' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
+		$title = sprintf( __( '<span>Day:</span> %s', 'raiden' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'raiden' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title' );
+			$title = _x( 'Asides', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title' );
+			$title = _x( 'Galleries', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title' );
+			$title = _x( 'Images', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title' );
+			$title = _x( 'Videos', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title' );
+			$title = _x( 'Quotes', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title' );
+			$title = _x( 'Links', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title' );
+			$title = _x( 'Statuses', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title' );
+			$title = _x( 'Audio', 'post format archive title', 'raiden' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title' );
+			$title = _x( 'Chats', 'post format archive title', 'raiden' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( '<span>Archives:</span> %s' ), post_type_archive_title( '', false ) );
+		$title = sprintf( __( '<span>Archives:</span> %s', 'raiden' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '<span>%1$s:</span> %2$s' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( __( '<span>%1$s:</span> %2$s', 'raiden' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives' );
+		$title = __( 'Archives', 'raiden' );
 	}
 
 	/**
