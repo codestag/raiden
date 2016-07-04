@@ -53,6 +53,10 @@
 		line-height: 1;
 		font-weight: 900;
 		margin: 0 0 10px;
+
+		@include media(max-width 480px) {
+			@include rem(font-size, 35px);
+		}
 	}
 
 	.entry-meta {
@@ -311,4 +315,8 @@ body.page {
 
 .instagram-follow-link {
 	display: inline-block;
+}
+
+.entry-subtitle {
+	margin-top: 20px;
 }

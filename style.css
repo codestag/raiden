@@ -1094,6 +1094,12 @@ a:hover, a:active {
   font-weight: 900;
   margin: 0 0 10px;
 }
+@media screen and (max-width: 480px) {
+  .post-tile .entry-title {
+    font-size: 35px;
+    font-size: 2.1875rem;
+  }
+}
 .post-tile .entry-meta {
   display: inline-block;
   color: #fff;
@@ -1322,6 +1328,10 @@ body.page .entry-content {
 
 .instagram-follow-link {
   display: inline-block;
+}
+
+.entry-subtitle {
+  margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
