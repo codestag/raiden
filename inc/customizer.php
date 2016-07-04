@@ -662,7 +662,8 @@ if ( ! function_exists( 'raiden_sanitize_layout' ) ) :
  * @return void
  */
 function raiden_sanitize_layout( $value ) {
-	if ( ! array_key_exists( $value, array( 'layout-one', 'layout-odd', 'layout-one-ex' ) ) ) {
+	$layouts = array( 'layout-one', 'layout-odd', 'layout-one-ex' );
+	if ( ! array_key_exists( $value, array_flip( $layouts ) ) ) {
 		$value = 'layout-one';
 	}
 
