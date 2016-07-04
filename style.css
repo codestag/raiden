@@ -592,7 +592,8 @@ a:hover, a:active {
 
 .expand-menu {
   -webkit-appearance: none;
-  background: #000;
+  background: #24252f;
+  background: rgba(36, 37, 47, 0.5);
   color: #fff;
   width: 100%;
   border: none;

@@ -45,7 +45,8 @@
 
 .expand-menu {
 	-webkit-appearance: none;
-	background: #000;
+	background: map-get($scheme, 'body-background');
+	background: rgba(map-get($scheme, 'body-background'), .5);
 	color: #fff;
 	width: 100%;
 	border: none;

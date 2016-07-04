@@ -25,6 +25,12 @@ function raiden_body_classes( $classes ) {
 		$classes[] = esc_attr( $layout );
 	}
 
+	// Color scheme class.
+	$scheme = get_theme_mod( 'color_scheme', 'default' );
+	if ( $scheme ) {
+		$classes[] = 'color-scheme-' . esc_attr( $scheme );
+	}
+
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
