@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Raiden\n"
-"POT-Creation-Date: 2016-06-28 15:37+0530\n"
+"POT-Creation-Date: 2016-07-04 17:50+0530\n"
 "PO-Revision-Date: 2016-06-28 15:37+0530\n"
 "Last-Translator: Ram Ratan Maurya <ram@codestag.com>\n"
 "Language-Team: Ram Ratan Maurya <ram@codestag.com>\n"
@@ -90,18 +90,6 @@ msgstr ""
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#. translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language.
-#: functions.php:151
-msgctxt "Roboto font: on or off"
-msgid "on"
-msgstr ""
-
-#. translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language.
-#: functions.php:156
-msgctxt "Inconsolata font: on or off"
-msgid "on"
-msgstr ""
-
 #: header.php:25
 msgid "Skip to content"
 msgstr ""
@@ -150,32 +138,176 @@ msgstr ""
 msgid "Button Color"
 msgstr ""
 
-#: inc/customizer.php:121 inc/customizer.php:131
+#: inc/customizer.php:121 inc/customizer.php:132
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:182
+#: inc/customizer.php:143
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer.php:146
+#, php-format
+msgid ""
+"The list of Google fonts is long! You can %s before making your choices."
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "preview"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Body Font"
+msgstr ""
+
+#: inc/customizer.php:177
+msgid "Header Font"
+msgstr ""
+
+#: inc/customizer.php:190
+msgid "Character Subset"
+msgstr ""
+
+#: inc/customizer.php:195
+#, php-format
+msgid ""
+"Not all fonts provide each of these subsets. Please visit the %s to see "
+"which subsets are available for each font."
+msgstr ""
+
+#: inc/customizer.php:199
+msgid "Google Fonts website"
+msgstr ""
+
+#: inc/customizer.php:246
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:258
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:270
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:218
+#: inc/customizer.php:282
 msgid "Green"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:294
 msgid "Yellow"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:306
 msgid "Blue"
+msgstr ""
+
+#: inc/helper-fonts.php:244
+msgid "All"
+msgstr ""
+
+#: inc/helper-fonts.php:245
+msgid "Arabic"
+msgstr ""
+
+#: inc/helper-fonts.php:246
+msgid "Bengali"
+msgstr ""
+
+#: inc/helper-fonts.php:247
+msgid "Cyrillic"
+msgstr ""
+
+#: inc/helper-fonts.php:248
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: inc/helper-fonts.php:249
+msgid "Devanagari"
+msgstr ""
+
+#: inc/helper-fonts.php:250
+msgid "Greek"
+msgstr ""
+
+#: inc/helper-fonts.php:251
+msgid "Greek Extended"
+msgstr ""
+
+#: inc/helper-fonts.php:252
+msgid "Gujarati"
+msgstr ""
+
+#: inc/helper-fonts.php:253
+msgid "Hebrew"
+msgstr ""
+
+#: inc/helper-fonts.php:254
+msgid "Khmer"
+msgstr ""
+
+#: inc/helper-fonts.php:255
+msgid "Latin"
+msgstr ""
+
+#: inc/helper-fonts.php:256
+msgid "Latin Extended"
+msgstr ""
+
+#: inc/helper-fonts.php:257
+msgid "Tamil"
+msgstr ""
+
+#: inc/helper-fonts.php:258
+msgid "Telugu"
+msgstr ""
+
+#: inc/helper-fonts.php:259
+msgid "Thai"
+msgstr ""
+
+#: inc/helper-fonts.php:260
+msgid "Vietnamese"
+msgstr ""
+
+#: inc/helper-fonts.php:323
+msgid "Standard Fonts"
+msgstr ""
+
+#: inc/helper-fonts.php:328
+msgid "Serif Fonts (Google)"
+msgstr ""
+
+#: inc/helper-fonts.php:331
+msgid "Sans Serif Fonts (Google)"
+msgstr ""
+
+#: inc/helper-fonts.php:334
+msgid "Display Fonts (Google)"
+msgstr ""
+
+#: inc/helper-fonts.php:337
+msgid "Handwriting Fonts (Google)"
+msgstr ""
+
+#: inc/helper-fonts.php:340
+msgid "Monospace Fonts (Google)"
+msgstr ""
+
+#: inc/helper-fonts.php:365
+msgctxt "font style"
+msgid "Serif"
+msgstr ""
+
+#: inc/helper-fonts.php:369
+msgctxt "font style"
+msgid "Sans Serif"
+msgstr ""
+
+#: inc/helper-fonts.php:373
+msgctxt "font style"
+msgid "Monospaced"
 msgstr ""
 
 #: inc/template-tags.php:30
@@ -355,13 +487,13 @@ msgstr ""
 
 #. translators: %s: Name of current post.
 #: template-parts/content-layout-excerpt.php:36
-#: template-parts/content-single.php:42
+#: template-parts/content-single.php:44
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: template-parts/content-layout-excerpt.php:41
-#: template-parts/content-page.php:22 template-parts/content-single.php:47
+#: template-parts/content-page.php:22 template-parts/content-single.php:49
 msgid "Pages:"
 msgstr ""
 
@@ -389,12 +521,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#. translators: %s: Name of current post
-#: template-parts/content-page.php:33
-#, php-format
-msgid "Edit %s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
