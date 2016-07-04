@@ -17,6 +17,7 @@ if ( has_post_thumbnail() ) $post_classes .= ' has-post-thumbnail';
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="<?php echo esc_attr( $post_classes ); ?>" <?php if ( has_post_thumbnail() ) echo 'style="background-image:url(' . esc_url( $thumbnail_url ) . ')"'; ?>>
+		<div class="link-overlay"></div>
 		<header class="entry-header">
 			<?php
 				if ( is_single() ) {
@@ -32,6 +33,7 @@ if ( has_post_thumbnail() ) $post_classes .= ' has-post-thumbnail';
 			<?php
 			endif; ?>
 		</header><!-- .entry-header -->
+
 	</div>
 
 
