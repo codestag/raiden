@@ -132,53 +132,29 @@ function raiden_widgets_init() {
 }
 add_action( 'widgets_init', 'raiden_widgets_init' );
 
-if ( ! function_exists( 'raiden_fonts_url' ) ) :
-/**
- * Register Google fonts for Raiden.
- *
- * Create your own raiden_fonts_url() function to override in a child theme.
- *
- * @since Raiden 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function raiden_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
-
-	/* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Roboto font: on or off', 'raiden' ) ) {
-		$fonts[] = 'Roboto:300,400,700,900,400italic,700italic,900italic';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'raiden' ) ) {
-		$fonts[] = 'Inconsolata:400';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-endif;
-
 /**
  * Enqueue scripts and styles.
  */
 function raiden_scripts() {
+	$style_dependencies = array();
+
+	// Google fonts
+	if ( '' !== $google_request = raiden_get_google_font_uri() ) {
+		// Enqueue the fonts
+		wp_enqueue_style(
+			'raiden-google-fonts',
+			$google_request,
+			$style_dependencies,
+			RAIDEN_VERSION
+		);
+		$style_dependencies[] = 'raiden-google-fonts';
+	}
+
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	$style_dependencies[] = 'genericons';
 
-	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'raiden-fonts', raiden_fonts_url(), array(), null );
-
-	wp_enqueue_style( 'raiden-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
 
@@ -238,4 +214,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/inc/google-fonts.php';
+require get_template_directory() . '/inc/helper-fonts.php';
 

@@ -137,6 +137,69 @@ function raiden_customize_register( $wp_customize ) {
 		),
 		'section'     => 'raiden_site_layout_settings',
 	) ) );
+
+	// Google fonts.
+	$wp_customize->add_section( 'raiden_fonts', array(
+		'title' => esc_html__( 'Fonts', 'raiden' ),
+		'panel' => 'raiden_options_panel',
+		'description' => sprintf(
+					esc_html__( 'The list of Google fonts is long! You can %s before making your choices.', 'raiden' ),
+					sprintf(
+						'<a href="%1$s" target="_blank">%2$s</a>',
+						esc_url( 'https://fonts.google.com' ),
+						esc_html__( 'preview', 'raiden' )
+					)
+				)
+	) );
+
+	$google_fonts = raiden_all_font_choices();
+
+	// Body Font selector.
+	$wp_customize->add_setting( 'raiden_body_font', array(
+		'default'           => 'Roboto',
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport'         => 'refresh',
+	) );
+	$wp_customize->add_control( 'raiden_body_font', array(
+		'label'    => esc_html__( 'Body Font', 'raiden' ),
+		'section'  => 'raiden_fonts',
+		'type'     => 'select',
+		'choices'  => $google_fonts,
+	) );
+
+	// Header Font selector.
+	$wp_customize->add_setting( 'raiden_header_font', array(
+		'default'           => 'Roboto',
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport'         => 'refresh',
+	) );
+	$wp_customize->add_control( 'raiden_header_font', array(
+		'label'    => esc_html__( 'Header Font', 'raiden' ),
+		'section'  => 'raiden_fonts',
+		'type'     => 'select',
+		'choices'  => $google_fonts,
+	) );
+
+	// Header Font selector.
+	$wp_customize->add_setting( 'raider_font_subset', array(
+		'default'           => 'latin',
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport'         => 'refresh',
+	) );
+	$wp_customize->add_control( 'raider_font_subset', array(
+		'label'    => esc_html__( 'Character Subset', 'raiden' ),
+		'section'  => 'raiden_fonts',
+		'type'     => 'select',
+		'choices'  => raiden_get_google_font_subsets(),
+		'description' => sprintf(
+					esc_html__( 'Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font.', 'carbon' ),
+					sprintf(
+						'<a href="%1$s" target="_blank">%2$s</a>',
+						esc_url( 'https://fonts.google.com' ),
+						esc_html__( 'Google Fonts website', 'carbon' )
+					)
+				),
+	) );
 }
 add_action( 'customize_register', 'raiden_customize_register' );
 
@@ -363,6 +426,33 @@ function raiden_color_scheme_css() {
 	wp_add_inline_style( 'raiden-style', $color_scheme_css );
 }
 add_action( 'wp_enqueue_scripts', 'raiden_color_scheme_css' );
+
+/**
+ * Returns CSS for the Google Fonts.
+ *
+ * @since Raiden 1.0
+ *
+ * @return string Google Fonts CSS.
+ */
+function raiden_google_fonts_css() {
+	$body_font   = get_theme_mod( 'raiden_body_font', 'Roboto' );
+	$header_font = get_theme_mod( 'raiden_header_font', 'Roboto' );
+
+	$fonts_css = <<<CSS
+	/* Body Font */
+	body {
+		font-family: {$body_font},"Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	/* Header Font */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: {$header_font},Georgia,Times,"Times New Roman",serif;
+	}
+CSS;
+
+	wp_add_inline_style( 'raiden-style', $fonts_css );
+
+}
+add_action( 'wp_enqueue_scripts', 'raiden_google_fonts_css' );
 
 /**
  * Returns CSS for the color schemes.
