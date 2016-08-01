@@ -1453,6 +1453,12 @@ body.page .entry-content {
   text-transform: uppercase;
 }
 
+.entry-footer,
+.comments-area,
+.post-navigation {
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
