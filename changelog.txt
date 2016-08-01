@@ -1,0 +1,5 @@
+## 1.0.1
+* Fixed issue w/ flex items taking eqaul width not full
+
+## 1.0.0
+* Initial release
