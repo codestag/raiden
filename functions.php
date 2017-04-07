@@ -10,7 +10,7 @@
 /**
  * The current version of the theme.
  */
-define( 'RAIDEN_VERSION', '1.0.1' );
+define( 'RAIDEN_VERSION', '1.0.2' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -218,3 +218,10 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/google-fonts.php';
 require get_template_directory() . '/inc/helper-fonts.php';
 
+
+/**
+ * Load auto updater
+ *
+ * @since 1.0.2.
+ */
+require get_template_directory() . '/inc/updater/theme-updater.php';

@@ -241,23 +241,23 @@ function raiden_get_google_font_subsets() {
 	 * @param array    $subsets    The list of subsets.
 	 */
 	return apply_filters( 'raiden_get_google_font_subsets', array(
-		'all'          => esc_html__( 'All', 'carbon' ),
-		'arabic'       => esc_html__( 'Arabic', 'carbon' ),
-		'bengali'      => esc_html__( 'Bengali', 'carbon' ),
-		'cyrillic'     => esc_html__( 'Cyrillic', 'carbon' ),
-		'cyrillic-ext' => esc_html__( 'Cyrillic Extended', 'carbon' ),
-		'devanagari'   => esc_html__( 'Devanagari', 'carbon' ),
-		'greek'        => esc_html__( 'Greek', 'carbon' ),
-		'greek-ext'    => esc_html__( 'Greek Extended', 'carbon' ),
-		'gujarati'     => esc_html__( 'Gujarati', 'carbon' ),
-		'hebrew'       => esc_html__( 'Hebrew', 'carbon' ),
-		'khmer'        => esc_html__( 'Khmer', 'carbon' ),
-		'latin'        => esc_html__( 'Latin', 'carbon' ),
-		'latin-ext'    => esc_html__( 'Latin Extended', 'carbon' ),
-		'tamil'        => esc_html__( 'Tamil', 'carbon' ),
-		'telugu'       => esc_html__( 'Telugu', 'carbon' ),
-		'thai'         => esc_html__( 'Thai', 'carbon' ),
-		'vietnamese'   => esc_html__( 'Vietnamese', 'carbon' ),
+		'all'          => esc_html__( 'All', 'raiden' ),
+		'arabic'       => esc_html__( 'Arabic', 'raiden' ),
+		'bengali'      => esc_html__( 'Bengali', 'raiden' ),
+		'cyrillic'     => esc_html__( 'Cyrillic', 'raiden' ),
+		'cyrillic-ext' => esc_html__( 'Cyrillic Extended', 'raiden' ),
+		'devanagari'   => esc_html__( 'Devanagari', 'raiden' ),
+		'greek'        => esc_html__( 'Greek', 'raiden' ),
+		'greek-ext'    => esc_html__( 'Greek Extended', 'raiden' ),
+		'gujarati'     => esc_html__( 'Gujarati', 'raiden' ),
+		'hebrew'       => esc_html__( 'Hebrew', 'raiden' ),
+		'khmer'        => esc_html__( 'Khmer', 'raiden' ),
+		'latin'        => esc_html__( 'Latin', 'raiden' ),
+		'latin-ext'    => esc_html__( 'Latin Extended', 'raiden' ),
+		'tamil'        => esc_html__( 'Tamil', 'raiden' ),
+		'telugu'       => esc_html__( 'Telugu', 'raiden' ),
+		'thai'         => esc_html__( 'Thai', 'raiden' ),
+		'vietnamese'   => esc_html__( 'Vietnamese', 'raiden' ),
 	) );
 }
 endif;
@@ -320,24 +320,24 @@ if ( ! function_exists( 'raiden_get_all_fonts' ) ) :
  * @return array    All available fonts.
  */
 function raiden_get_all_fonts() {
-	$heading1            = array( 1 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Standard Fonts', 'carbon' ) ) ) );
+	$heading1            = array( 1 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Standard Fonts', 'raiden' ) ) ) );
 	$standard_fonts      = raiden_get_standard_fonts();
 
 	$google_fonts        = raiden_get_google_fonts();
 
-	$serif_heading       = array( 2 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Serif Fonts (Google)', 'carbon' ) ) ) );
+	$serif_heading       = array( 2 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Serif Fonts (Google)', 'raiden' ) ) ) );
 	$serif_fonts         = wp_list_filter( $google_fonts, array( 'category' => 'serif' ) );
 
-	$sans_serif_heading  = array( 3 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Sans Serif Fonts (Google)', 'carbon' ) ) ) );
+	$sans_serif_heading  = array( 3 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Sans Serif Fonts (Google)', 'raiden' ) ) ) );
 	$sans_serif_fonts    = wp_list_filter( $google_fonts, array( 'category' => 'sans-serif' ) );
 
-	$display_heading     = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Display Fonts (Google)', 'carbon' ) ) ) );
+	$display_heading     = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Display Fonts (Google)', 'raiden' ) ) ) );
 	$display_fonts       = wp_list_filter( $google_fonts, array( 'category' => 'display' ) );
 
-	$handwriting_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Handwriting Fonts (Google)', 'carbon' ) ) ) );
+	$handwriting_heading = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Handwriting Fonts (Google)', 'raiden' ) ) ) );
 	$handwriting_fonts   = wp_list_filter( $google_fonts, array( 'category' => 'handwriting' ) );
 
-	$monospace_heading   = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Monospace Fonts (Google)', 'carbon' ) ) ) );
+	$monospace_heading   = array( 4 => array( 'label' => sprintf( '&mdash; %s &mdash;', esc_html__( 'Monospace Fonts (Google)', 'raiden' ) ) ) );
 	$monospace_fonts     = wp_list_filter( $google_fonts, array( 'category' => 'monospace' ) );
 
 	return apply_filters( 'raiden_all_fonts', array_merge(
@@ -362,15 +362,15 @@ if ( ! function_exists( 'raiden_get_standard_fonts' ) ) :
 function raiden_get_standard_fonts() {
 	return array(
 		'serif' => array(
-			'label' => _x( 'Serif', 'font style', 'carbon' ),
+			'label' => _x( 'Serif', 'font style', 'raiden' ),
 			'stack' => 'Georgia,Times,"Times New Roman",serif',
 		),
 		'sans-serif' => array(
-			'label' => _x( 'Sans Serif', 'font style', 'carbon' ),
+			'label' => _x( 'Sans Serif', 'font style', 'raiden' ),
 			'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
 		),
 		'monospace' => array(
-			'label' => _x( 'Monospaced', 'font style', 'carbon' ),
+			'label' => _x( 'Monospaced', 'font style', 'raiden' ),
 			'stack' => 'Monaco,"Lucida Sans Typewriter	","Lucida Typewriter","Courier New",Courier,monospace',
 		)
 	);

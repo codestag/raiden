@@ -192,11 +192,11 @@ function raiden_customize_register( $wp_customize ) {
 		'type'     => 'select',
 		'choices'  => raiden_get_google_font_subsets(),
 		'description' => sprintf(
-					esc_html__( 'Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font.', 'carbon' ),
+					esc_html__( 'Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font.', 'raiden' ),
 					sprintf(
 						'<a href="%1$s" target="_blank">%2$s</a>',
 						esc_url( 'https://fonts.google.com' ),
-						esc_html__( 'Google Fonts website', 'carbon' )
+						esc_html__( 'Google Fonts website', 'raiden' )
 					)
 				),
 	) );
@@ -412,7 +412,7 @@ function raiden_color_scheme_css() {
 
 	// If we get this far, we have a custom color scheme.
 	$colors = array(
-		'background_color'    => $color_scheme[0],
+		'background_color'         => $color_scheme[0],
 		'sidebar_background_color' => $color_scheme[1],
 		'sidebar_text_color'       => $color_scheme[2],
 		'content_background_color' => $color_scheme[3],
@@ -670,3 +670,185 @@ function raiden_sanitize_layout( $value ) {
 	return $value;
 }
 endif; // raiden_sanitize_layout.
+
+/**
+ * Enqueues front-end CSS for the sidebar background color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_sidebar_background_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[1];
+	$sidebar_background_color = get_theme_mod( 'sidebar_background_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $sidebar_background_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Sidebar Background Color */
+	.sidebar { background-color: %1$s; }
+	.author-info { background-color: %1$s; }
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $sidebar_background_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_sidebar_background_color_css', 11 );
+
+/**
+ * Enqueues front-end CSS for the sidebar text color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_sidebar_text_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[2];
+	$sidebar_text_color = get_theme_mod( 'sidebar_text_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $sidebar_text_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Sidebar Text Color */
+	.sidebar { color: %1$s; }
+	.author-info { color: %1$s; }
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $sidebar_text_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_sidebar_text_color_css', 11 );
+
+/**
+ * Enqueues front-end CSS for the content background color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_content_background_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[3];
+	$content_background_color = get_theme_mod( 'content_background_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $content_background_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Content Background Color */
+	.site-content { background-color: %1$s; }
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $content_background_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_content_background_color_css', 11 );
+
+/**
+ * Enqueues front-end CSS for the content text color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_content_text_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[4];
+	$content_text_color = get_theme_mod( 'content_text_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $content_text_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Content Text Color */
+	.site-content { color: %1$s; }
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $content_text_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_content_text_color_css', 11 );
+
+/**
+ * Enqueues front-end CSS for the link color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_link_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[5];
+	$link_color = get_theme_mod( 'link_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $link_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Link Color */
+	a { color: %1$s; }
+	.layout-one-ex .entry-meta { background-color: %1$s !important; }
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $link_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_link_color_css', 11 );
+
+
+/**
+ * Enqueues front-end CSS for the button color.
+ *
+ * @since Raiden 1.0.2
+ *
+ * @see wp_add_inline_style()
+ */
+function raiden_button_color_css() {
+	$color_scheme    = raiden_get_color_scheme();
+	$default_color   = $color_scheme[6];
+	$button_color = get_theme_mod( 'button_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $button_color === $default_color ) {
+		return;
+	}
+
+	$css = '
+	/* Custom Button Color */
+	button,
+	button[disabled]:hover,
+	button[disabled]:focus,
+	.stag-button,
+	.stag-button[disabled]:hover,
+	.stag-button[disabled]:focus,
+	input[type="button"],
+	input[type="button"][disabled]:hover,
+	input[type="button"][disabled]:focus,
+	input[type="reset"],
+	input[type="reset"][disabled]:hover,
+	input[type="reset"][disabled]:focus,
+	input[type="submit"],
+	input[type="submit"][disabled]:hover,
+	input[type="submit"][disabled]:focus {
+		background-color: %1$s;
+	}
+	';
+
+	wp_add_inline_style( 'raiden-style', sprintf( $css, $button_color ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'raiden_button_color_css', 11 );
