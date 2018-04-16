@@ -183,11 +183,10 @@ function raiden_block_editor_styles() {
 	$style_dependencies[] = 'genericons';
 
 	// Block Editor Styles.
-	wp_enqueue_style( 'raiden-block-editor-style', get_template_directory_uri() . '/assets/css/block-editor-style.css', $style_dependencies, '1.0' );
+	wp_enqueue_style( 'raiden-block-editor-style', get_template_directory_uri() . '/css/block-editor-style.css', $style_dependencies, '1.0' );
 
 	$font_header = get_theme_mod( 'raiden_header_font', 'Roboto' );
-
-	$font_body = get_theme_mod( 'raiden_body_font', 'Roboto' );
+	$font_body   = get_theme_mod( 'raiden_body_font', 'Roboto' );
 
 	$link_color       = get_theme_mod( 'link_color', 'default' );
 	$text_color       = get_theme_mod( 'content_text_color', 'default' );
