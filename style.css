@@ -1681,6 +1681,8 @@ figure {
   margin: 20px 0;
 }
 
+/* TODO: Fix Alignment */
+/*
 @media (min-width: 1000px) {
   .alignfull {
     margin-left: calc(80% - 100%);
@@ -1693,12 +1695,13 @@ figure {
   }
 
   .alignwide {
-    margin-left: calc(75% - 50vw);
-    margin-right: calc(75% - 50vw);
+    margin-left: calc(40% - 25vw);
+    margin-right: calc(40% - 25vw);
     width: auto;
-    max-width: 1000%;
+    max-width: 1130px;
   }
   .alignwide img {
     width: 100%;
   }
 }
+*/
