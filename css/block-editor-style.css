@@ -59,41 +59,44 @@
 }
 
 .edit-post-visual-editor h1 {
-  font-size: 48px;
+  font-size: 50px;
   line-height: 1.5;
   text-align: left;
-  font-weight: 300;
 }
 
 .edit-post-visual-editor h2 {
-  font-size: 31.25px;
+  font-size: 35.25px;
   line-height: 1.4;
 }
 
 .edit-post-visual-editor h3 {
-  font-size: 27px;
+  font-size: 30px;
 }
 
 .edit-post-visual-editor h4 {
-  font-size: 23px;
+  font-size: 25px;
 }
 
 .edit-post-visual-editor h5 {
-  font-size: 19px;
+  font-size: 21px;
 }
 
 .edit-post-visual-editor h6 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   margin: 10px 0;
 }
 
 .edit-post-visual-editor a {
   outline: 0;
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--link-color, #00b796);
+}
+
+.edit-post-visual-editor a:hover {
+  color: #333333;
 }
 
 h1 a,
