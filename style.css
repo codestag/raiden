@@ -1676,3 +1676,29 @@ object {
 .gallery-caption {
   display: block;
 }
+
+figure {
+  margin: 20px 0;
+}
+
+@media (min-width: 1000px) {
+  .alignfull {
+    margin-left: calc(80% - 100%);
+    margin-right: calc(80% - 100%);
+    width: auto;
+    max-width: 1130px;
+  }
+  .alignfull img {
+    width: 100%;
+  }
+
+  .alignwide {
+    margin-left: calc(75% - 50vw);
+    margin-right: calc(75% - 50vw);
+    width: auto;
+    max-width: 1000%;
+  }
+  .alignwide img {
+    width: 100%;
+  }
+}
