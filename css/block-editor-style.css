@@ -21,7 +21,7 @@
 
 .edit-post-visual-editor {
   line-height: 1.5 !important;
-  color: var(--text-color, #000);
+  color: var(--text-color, #000) !important;
   font-size: 23.75px;
   font-family: var(--font-body, "Roboto");
 }
@@ -55,6 +55,7 @@
   font-weight: bold;
   line-height: 1.375;
   letter-spacing: -0.02em;
+  color: var(--text-color, #000) !important;
   font-family: var(--font-header, "Roboto");
 }
 
