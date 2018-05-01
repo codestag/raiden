@@ -1,3 +1,8 @@
+## 1.1.0
+* Added compatibility with Gutenberg
+* Compatible with WordPress 4.9+
+* Updated Google fonts library
+
 ## 1.0.2
 * Fixed an issue where custom Colors wont work in Customizer
 * Allow theme to be updated automatically

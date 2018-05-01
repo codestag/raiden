@@ -111,9 +111,14 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 			)
 		);
 
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 		/**
-		* Add Gutenberg Support.
-		*/
+		 * Add Gutenberg Support.
+		 *
+		 * @since 1.1.0.
+		 */
 		add_theme_support(
 			'editor-color-palette',
 			'#484b50',
