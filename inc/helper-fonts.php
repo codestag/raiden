@@ -227,39 +227,28 @@ function raiden_sanitize_font_subset( $value ) {
 endif;
 
 if ( ! function_exists( 'raiden_get_google_font_subsets' ) ) :
-/**
- * Retrieve the list of available Google font subsets.
- *
- * @since  1.0.0.
- *
- * @return array    The available subsets.
- */
-function raiden_get_google_font_subsets() {
 	/**
-	 * Filter the list of supported Google Font subsets.
+	 * Iterate through all the Google font data and build a list of unique subset options.
 	 *
-	 * @param array    $subsets    The list of subsets.
+	 * @since 1.0.0
+	 *
+	 * @return array
 	 */
-	return apply_filters( 'raiden_get_google_font_subsets', array(
-		'all'          => esc_html__( 'All', 'raiden' ),
-		'arabic'       => esc_html__( 'Arabic', 'raiden' ),
-		'bengali'      => esc_html__( 'Bengali', 'raiden' ),
-		'cyrillic'     => esc_html__( 'Cyrillic', 'raiden' ),
-		'cyrillic-ext' => esc_html__( 'Cyrillic Extended', 'raiden' ),
-		'devanagari'   => esc_html__( 'Devanagari', 'raiden' ),
-		'greek'        => esc_html__( 'Greek', 'raiden' ),
-		'greek-ext'    => esc_html__( 'Greek Extended', 'raiden' ),
-		'gujarati'     => esc_html__( 'Gujarati', 'raiden' ),
-		'hebrew'       => esc_html__( 'Hebrew', 'raiden' ),
-		'khmer'        => esc_html__( 'Khmer', 'raiden' ),
-		'latin'        => esc_html__( 'Latin', 'raiden' ),
-		'latin-ext'    => esc_html__( 'Latin Extended', 'raiden' ),
-		'tamil'        => esc_html__( 'Tamil', 'raiden' ),
-		'telugu'       => esc_html__( 'Telugu', 'raiden' ),
-		'thai'         => esc_html__( 'Thai', 'raiden' ),
-		'vietnamese'   => esc_html__( 'Vietnamese', 'raiden' ),
-	) );
-}
+	function raiden_get_google_font_subsets() {
+		$subsets = array();
+		$font_data = raiden_get_google_fonts();
+
+		foreach ( $font_data as $font => $data ) {
+			if ( isset( $data['subsets'] ) ) {
+				$subsets = array_merge( $subsets, (array) $data['subsets'] );
+			}
+		}
+
+		$subsets = array_unique( $subsets );
+		sort( $subsets );
+
+		return $subsets;
+	}
 endif;
 
 if ( ! function_exists( 'raiden_sanitize_font_choice' ) ) :
