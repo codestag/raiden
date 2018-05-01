@@ -1,3 +1,4 @@
+/* global jQuery */
 /**
  * File navigation.js.
  *
@@ -6,12 +7,14 @@
  */
 ( function( $ ) {
 
-	secondary = $( '#secondary' );
-	button = $( '.site-header' ).find( '.expand-menu' );
+	$( '.entry-content' ).fitVids();
+
+	let secondary = $( '#secondary' );
+	let button = $( '.site-header' ).find( '.expand-menu' );
 
 	// Enable menu toggle for small screens.
 	( function() {
-		var menu, widgets, social;
+		var menu, widgets;
 		if ( ! secondary.length || ! button.length ) {
 			return;
 		}
@@ -35,7 +38,7 @@
 				$( this ).attr( 'aria-expanded', 'false' );
 				secondary.attr( 'aria-expanded', 'false' );
 			}
-		} );
-	} )();
+		});
+	}() );
 
-} )( jQuery );
+}( jQuery ) );
