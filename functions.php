@@ -20,85 +20,110 @@ if ( ! isset( $content_width ) ) {
 }
 
 if ( ! function_exists( 'raiden_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function raiden_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Raiden, use a find and replace
-	 * to change 'raiden' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'raiden', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for custom logo.
-	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 270,
-		'width'       => 270,
-		'flex-height' => true,
-	) );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function raiden_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Raiden, use a find and replace
+		 * to change 'raiden' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'raiden', get_template_directory() . '/languages' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'raiden' ),
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+		/*
+		 * Enable support for custom logo.
+		 */
+		add_theme_support(
+			'custom-logo', array(
+				'height'      => 270,
+				'width'       => 270,
+				'flex-height' => true,
+			)
+		);
 
-	// Set up the WordPress core custom background feature.
-	$color_scheme = raiden_get_color_scheme();
-	$default_background_color = trim( $color_scheme[0], '#' );
-	add_theme_support( 'custom-background', apply_filters( 'raiden_custom_background_args', array(
-		'default-color' => $default_background_color,
-	) ) );
-}
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus(
+			array(
+				'primary' => esc_html__( 'Primary', 'raiden' ),
+			)
+		);
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
+
+		/*
+		 * Enable support for Post Formats.
+		 * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 */
+		add_theme_support(
+			'post-formats', array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+			)
+		);
+
+		// Set up the WordPress core custom background feature.
+		$color_scheme             = raiden_get_color_scheme();
+		$default_background_color = trim( $color_scheme[0], '#' );
+		add_theme_support(
+			'custom-background', apply_filters(
+				'raiden_custom_background_args', array(
+					'default-color' => $default_background_color,
+				)
+			)
+		);
+
+		/**
+		* Add Gutenberg Support.
+		*/
+		add_theme_support(
+			'editor-color-palette',
+			'#484b50',
+			'#859093',
+			get_theme_mod( 'content_background-color', 'default' ),
+			get_theme_mod( 'content_text_color', 'default' )
+		);
+
+		add_theme_support( 'align-wide' );
+	}
 endif;
 add_action( 'after_setup_theme', 'raiden_setup' );
 
@@ -120,17 +145,69 @@ add_action( 'after_setup_theme', 'raiden_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function raiden_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Widget Area', 'raiden' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'raiden' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Widget Area', 'raiden' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'raiden' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'raiden_widgets_init' );
+
+/**
+ * Enqueue Gutenberg Styles & Scripts.
+ */
+function raiden_block_editor_styles() {
+
+	$style_dependencies = array();
+
+	// Google fonts
+	if ( '' !== $google_request = raiden_get_google_font_uri() ) {
+		// Enqueue the fonts
+		wp_enqueue_style(
+			'raiden-google-fonts',
+			$google_request,
+			$style_dependencies,
+			RAIDEN_VERSION
+		);
+		$style_dependencies[] = 'raiden-google-fonts';
+	}
+
+	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	$style_dependencies[] = 'genericons';
+
+	// Block Editor Styles.
+	wp_enqueue_style( 'raiden-block-editor-style', get_template_directory_uri() . '/css/block-editor-style.css', $style_dependencies, '1.0' );
+
+	$font_header = get_theme_mod( 'raiden_header_font', 'Roboto' );
+	$font_body   = get_theme_mod( 'raiden_body_font', 'Roboto' );
+
+	$link_color       = get_theme_mod( 'link_color', 'default' );
+	$text_color       = get_theme_mod( 'content_text_color', 'default' );
+	$content_bg_color = get_theme_mod( 'content_background_color', 'default' );
+
+	wp_add_inline_style(
+		'raiden-block-editor-style', "
+		.edit-post-layout__content {
+			--link-color: {$link_color};
+			--text-color: {$text_color};
+			--content-bg-color: {$content_bg_color};
+		}
+		.edit-post-visual-editor {
+			--font-body: '{$font_body}';
+			--font-header: '{$font_header}';
+		}"
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'raiden_block_editor_styles' );
+
+
 
 /**
  * Enqueue scripts and styles.
@@ -155,6 +232,8 @@ function raiden_scripts() {
 	$style_dependencies[] = 'genericons';
 
 	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
+
+	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
 
@@ -184,7 +263,7 @@ function raiden_hex2rgb( $color ) {
 		$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
 		$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
 		$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
-	} else if ( strlen( $color ) === 6 ) {
+	} elseif ( strlen( $color ) === 6 ) {
 		$r = hexdec( substr( $color, 0, 2 ) );
 		$g = hexdec( substr( $color, 2, 2 ) );
 		$b = hexdec( substr( $color, 4, 2 ) );
@@ -192,7 +271,11 @@ function raiden_hex2rgb( $color ) {
 		return array();
 	}
 
-	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+	return array(
+		'red'   => $r,
+		'green' => $g,
+		'blue'  => $b,
+	);
 }
 
 /**

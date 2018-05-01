@@ -1,0 +1,183 @@
+.edit-post-visual-editor .editor-block-list__block {
+	margin: 0 auto;
+	max-width: 790px;
+}
+
+.editor-post-title,
+.editor-post-title .editor-post-title__input {
+	max-width: 790px !important;
+	font-family: var(--font-header, 'Roboto');
+	word-wrap: break-word;
+	margin-bottom: 10px;
+	word-break: break-word;
+	color: #000;
+	line-height: 1.2;
+}
+.editor-post-title .editor-post-title__input {
+	font-size: 55px;
+	font-weight: 900;
+	letter-spacing: -2px;
+}
+
+.edit-post-visual-editor {
+	line-height: 1.5 !important;
+	color: var(--text-color, #000) !important;
+	font-size: 19px;
+	font-family: var(--font-body, 'Roboto');
+}
+
+.edit-post-visual-editor .editor-block-list__layout {
+	margin: 15px 0 0;
+	background-color: var(--content-bg-color, #fff);
+}
+
+.edit-post-visual-editor p,
+.edit-post-visual-editor ul,
+.edit-post-visual-editor ol {
+	font-size: 19px;
+	font-family: var(--font-body, 'Roboto');
+}
+
+.edit-post-visual-editor p.wp-block-subhead {
+	color: #413c3c;
+	font-size: 20.9px;
+}
+
+.edit-post-visual-editor h1,
+.edit-post-visual-editor h2,
+.edit-post-visual-editor h3,
+.edit-post-visual-editor h4,
+.edit-post-visual-editor h5,
+.edit-post-visual-editor h6 {
+	clear: both;
+	margin: 0;
+	font-weight: bold;
+	line-height: 1.375;
+	letter-spacing: -0.02em;
+	color: var(--text-color, #000) !important;
+	font-family: var(--font-header, 'Roboto');
+}
+
+.edit-post-visual-editor h1 {
+	font-size: 38px;
+	line-height: 1.5;
+}
+
+.edit-post-visual-editor h2 {
+	font-size: 28px;
+	line-height: 1.4;
+}
+
+.edit-post-visual-editor h3 {
+	font-size: 22.23px;
+}
+
+.edit-post-visual-editor h4 {
+	font-size: 19px;
+}
+
+.edit-post-visual-editor h5 {
+	font-size: 15.76px;
+}
+
+.edit-post-visual-editor h6 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 12.73px;
+}
+
+.edit-post-visual-editor a {
+	outline: 0;
+	text-decoration: none;
+	color: var(--link-color, #00b796);
+}
+
+.edit-post-visual-editor a:hover {
+	color: #333333;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+	color: inherit;
+}
+.edit-post-visual-editor .editor-block-list__block h1 a:visited,
+.edit-post-visual-editor .editor-block-list__block h2 a:visited,
+.edit-post-visual-editor .editor-block-list__block h3 a:visited,
+.edit-post-visual-editor .editor-block-list__block h4 a:visited,
+.edit-post-visual-editor .editor-block-list__block h5 a:visited,
+.edit-post-visual-editor .editor-block-list__block h6 a:visited {
+	color: inherit;
+}
+
+.edit-post-visual-editor ul:not(.wp-block-gallery) {
+	margin-left: 25px;
+}
+
+.edit-post-visual-editor ol {
+	margin-left: 25px;
+}
+
+.edit-post-visual-editor blockquote:not(.wp-block-pullquote) {
+	border: 0 !important;
+	position: relative;
+	margin: 0;
+	padding: 25px 0;
+	text-align: left;
+	text-indent: 0 !important;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.edit-post-visual-editor blockquote cite {
+	line-height: 20px;
+	padding: 0 7px;
+	display: inline-block;
+	color: #6c7781;
+	margin-top: 10px;
+	position: relative;
+	font-size: 13px;
+	font-style: normal;
+}
+
+.edit-post-visual-editor blockquote:not(.wp-block-pullquote) p {
+	font-family: var(--font-body, 'Roboto');
+	line-height: 1.55;
+	font-size: 19px;
+	color: var(--text-color, #000);
+	margin: 0;
+	margin-bottom: 0px;
+	margin-bottom: 13px;
+}
+
+.edit-post-visual-editor blockquote.wp-block-pullquote {
+	border-top: 4px solid #555d66 !important;
+	border-bottom: 4px solid #555d66 !important;
+	color: #40464d;
+	padding: 3em 0;
+	margin: 0;
+	text-align: center;
+}
+
+.edit-post-visual-editor blockquote.wp-block-pullquote p {
+	font-family: var(--font-body, 'Roboto');
+	font-size: 24px;
+	line-height: 1.6;
+}
+
+.edit-post-visual-editor blockquote.wp-block-pullquote cite {
+	position: relative;
+	font-weight: normal;
+	font-size: 13px;
+	font-style: italic;
+	color: #40464d;
+}
+
+.wp-block-button .wp-block-button__link {
+	line-height: 24px !important;
+}

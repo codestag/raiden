@@ -182,7 +182,7 @@ function raiden_customize_register( $wp_customize ) {
 
 	// Header Font selector.
 	$wp_customize->add_setting( 'raider_font_subset', array(
-		'default'           => 'latin',
+		'default'           => '13',
 		'sanitize_callback' => 'sanitize_text_field',
 		'transport'         => 'refresh',
 	) );
