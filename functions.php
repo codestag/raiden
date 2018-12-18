@@ -128,6 +128,7 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		);
 
 		add_theme_support( 'align-wide' );
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'raiden_setup' );
@@ -237,8 +238,6 @@ function raiden_scripts() {
 	$style_dependencies[] = 'genericons';
 
 	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
-
-	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
 
