@@ -203,6 +203,15 @@ pre {
 	padding: 1.6em;
 }
 
+.wp-block-verse pre, pre.wp-block-verse {
+    color: #191e23;
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1em;
+    overflow: auto;
+}
+
 .alignleft, .alignright {
 	margin-top: 1em;
 	margin-bottom: 1em;

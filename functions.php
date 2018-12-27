@@ -119,14 +119,6 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		 *
 		 * @since 1.1.0.
 		 */
-		add_theme_support(
-			'editor-color-palette',
-			'#484b50',
-			'#859093',
-			get_theme_mod( 'content_background-color', 'default' ),
-			get_theme_mod( 'content_text_color', 'default' )
-		);
-
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'editor-styles' );

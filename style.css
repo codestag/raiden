@@ -1555,3 +1555,7 @@ object {
 .gallery-caption {
   display: block;
 }
+
+.wp-block-table td, .wp-block-table th {
+	padding: .5em;
+}
