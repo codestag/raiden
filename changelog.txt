@@ -1,3 +1,10 @@
+## 1.2.0
+* Compatible with WordPress v5.1
+* Remove fitvids dependency
+* Updated compatibility with Gutenberg
+* Fix duplicate author description on Author Archives
+* Tweak styles for StagTools' Instagram widget
+
 ## 1.1.0
 * Added compatibility with Gutenberg
 * Compatible with WordPress 4.9+
