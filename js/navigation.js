@@ -7,8 +7,6 @@
  */
 ( function( $ ) {
 
-	$( '.entry-content' ).fitVids();
-
 	let secondary = $( '#secondary' );
 	let button = $( '.site-header' ).find( '.expand-menu' );
 
