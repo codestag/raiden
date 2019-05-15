@@ -760,7 +760,8 @@ a:hover, a:active {
   clear: both;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1553,4 +1554,8 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+.wp-block-table td, .wp-block-table th {
+	padding: .5em;
 }

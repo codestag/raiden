@@ -105,3 +105,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import 'media/media';
+
+
+.wp-block-table td, .wp-block-table th {
+	padding: .5em;
+}

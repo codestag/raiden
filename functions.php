@@ -119,15 +119,11 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		 *
 		 * @since 1.1.0.
 		 */
-		add_theme_support(
-			'editor-color-palette',
-			'#484b50',
-			'#859093',
-			get_theme_mod( 'content_background-color', 'default' ),
-			get_theme_mod( 'content_text_color', 'default' )
-		);
+		add_theme_support( 'responsive-embeds' );
+		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'editor-styles' );
 
-		add_theme_support( 'align-wide' );
+		add_editor_style( '/css/editor-style.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'raiden_setup' );
@@ -169,36 +165,29 @@ add_action( 'widgets_init', 'raiden_widgets_init' );
  */
 function raiden_block_editor_styles() {
 
-	$style_dependencies = array();
-
-	// Google fonts
+	// Google fonts.
 	if ( '' !== $google_request = raiden_get_google_font_uri() ) {
-		// Enqueue the fonts
+		// Enqueue the fonts.
 		wp_enqueue_style(
 			'raiden-google-fonts',
 			$google_request,
-			$style_dependencies,
+			array(),
 			RAIDEN_VERSION
 		);
-		$style_dependencies[] = 'raiden-google-fonts';
 	}
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
-	$style_dependencies[] = 'genericons';
-
-	// Block Editor Styles.
-	wp_enqueue_style( 'raiden-block-editor-style', get_template_directory_uri() . '/css/block-editor-style.css', $style_dependencies, '1.0' );
 
 	$font_header = get_theme_mod( 'raiden_header_font', 'Roboto' );
 	$font_body   = get_theme_mod( 'raiden_body_font', 'Roboto' );
 
-	$link_color       = get_theme_mod( 'link_color', 'default' );
-	$text_color       = get_theme_mod( 'content_text_color', 'default' );
-	$content_bg_color = get_theme_mod( 'content_background_color', 'default' );
+	$link_color       = get_theme_mod( 'link_color', '#00b796' );
+	$text_color       = get_theme_mod( 'content_text_color', '#252323' );
+	$content_bg_color = get_theme_mod( 'content_background_color', '#ffffff' );
 
 	wp_add_inline_style(
-		'raiden-block-editor-style', "
+		'raiden-google-fonts', "
 		.edit-post-layout__content {
 			--link-color: {$link_color};
 			--text-color: {$text_color};
@@ -237,8 +226,6 @@ function raiden_scripts() {
 	$style_dependencies[] = 'genericons';
 
 	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
-
-	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '1.1', true );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
 
