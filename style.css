@@ -760,8 +760,8 @@ a:hover, a:active {
   clear: both;
   display: block;
   margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+  margin-right: auto;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -836,6 +836,9 @@ a:hover, a:active {
 .widget li {
   display: block;
   margin-bottom: 10px;
+}
+.widget.stag-instagram li {
+  display: inline-block;
 }
 
 .stag-flickr-widget ul {
@@ -1557,5 +1560,5 @@ object {
 }
 
 .wp-block-table td, .wp-block-table th {
-	padding: .5em;
+  padding: .5em;
 }
