@@ -18,23 +18,22 @@ get_header(); ?>
 			</h1>
 
 			<?php if ( is_author() ) : ?>
-				<div class="author-description">
-					<?php the_author_meta( 'description' ); ?>
-				</div>
+				<?php the_archive_description( '<div class="author-description">', '</div>' ); ?>
+			<?php else : ?>
+				<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 			<?php endif; ?>
 
-			<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 		</header><!-- .page-header -->
 		<?php endif; ?>
 
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
 
-			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -49,13 +48,16 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 
-		<?php if ( have_posts() ) :
+		<?php
+		if ( have_posts() ) :
 			the_posts_navigation();
-		endif; ?>
+		endif;
+		?>
 	</div><!-- #primary -->
 
 <?php
