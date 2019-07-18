@@ -10,7 +10,7 @@
 /**
  * The current version of the theme.
  */
-define( 'RAIDEN_VERSION', '1.0.2' );
+define( 'RAIDEN_VERSION', '1.2.0' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -51,7 +51,8 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		 * Enable support for custom logo.
 		 */
 		add_theme_support(
-			'custom-logo', array(
+			'custom-logo',
+			array(
 				'height'      => 270,
 				'width'       => 270,
 				'flex-height' => true,
@@ -77,7 +78,8 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support(
-			'html5', array(
+			'html5',
+			array(
 				'search-form',
 				'comment-form',
 				'comment-list',
@@ -91,7 +93,8 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		 * See https://developer.wordpress.org/themes/functionality/post-formats/
 		 */
 		add_theme_support(
-			'post-formats', array(
+			'post-formats',
+			array(
 				'aside',
 				'image',
 				'video',
@@ -104,8 +107,10 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		$color_scheme             = raiden_get_color_scheme();
 		$default_background_color = trim( $color_scheme[0], '#' );
 		add_theme_support(
-			'custom-background', apply_filters(
-				'raiden_custom_background_args', array(
+			'custom-background',
+			apply_filters(
+				'raiden_custom_background_args',
+				array(
 					'default-color' => $default_background_color,
 				)
 			)
@@ -187,7 +192,8 @@ function raiden_block_editor_styles() {
 	$content_bg_color = get_theme_mod( 'content_background_color', '#ffffff' );
 
 	wp_add_inline_style(
-		'raiden-google-fonts', "
+		'raiden-google-fonts',
+		"
 		.edit-post-layout__content {
 			--link-color: {$link_color};
 			--text-color: {$text_color};
