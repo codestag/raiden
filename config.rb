@@ -3,11 +3,11 @@ require 'compass/import-once/activate'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "js"
-fonts_dir = "fonts"
+css_dir = "/"
+sass_dir = "assets/sass"
+images_dir = "assets/images"
+javascripts_dir = "assets/js"
+fonts_dir = "assets/fonts"
 
 line_comments = false
 
@@ -29,6 +29,6 @@ require 'fileutils'
 on_stylesheet_saved do |file|
   if File.exists?(file) && File.basename(file) == "style.css"
     puts "Moving: #{file}"
-    FileUtils.mv(file, File.dirname(file) + "/../" + File.basename(file))
+    FileUtils.mv(file, File.dirname(file) + "/../../" + File.basename(file))
   end
 end
