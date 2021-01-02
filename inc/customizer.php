@@ -207,7 +207,7 @@ add_action( 'customize_register', 'raiden_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function raiden_customize_preview_js() {
-	wp_enqueue_script( 'raiden_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'raiden_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'raiden_customize_preview_js' );
 
@@ -219,7 +219,7 @@ add_action( 'customize_preview_init', 'raiden_customize_preview_js' );
  * @since Raiden 1.0
  */
 function raiden_customize_control_js() {
-	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160604', true );
+	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/assets/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160604', true );
 	wp_localize_script( 'color-scheme-control', 'colorScheme', raiden_get_color_schemes() );
 }
 add_action( 'customize_controls_enqueue_scripts', 'raiden_customize_control_js' );

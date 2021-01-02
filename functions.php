@@ -128,7 +128,7 @@ if ( ! function_exists( 'raiden_setup' ) ) :
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'editor-styles' );
 
-		add_editor_style( '/css/editor-style.css' );
+		add_editor_style( '/assets/css/editor-style.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'raiden_setup' );
@@ -182,7 +182,7 @@ function raiden_block_editor_styles() {
 	}
 
 	// Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/css/genericons/genericons.css', array(), '3.4.1' );
 
 	$font_header = get_theme_mod( 'raiden_header_font', 'Roboto' );
 	$font_body   = get_theme_mod( 'raiden_body_font', 'Roboto' );
@@ -228,14 +228,14 @@ function raiden_scripts() {
 	}
 
 	// Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/css/genericons/genericons.css', array(), '3.4.1' );
 	$style_dependencies[] = 'genericons';
 
 	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
 
-	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
+	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20151215', true );
 
-	wp_enqueue_script( 'raiden-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'raiden-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
