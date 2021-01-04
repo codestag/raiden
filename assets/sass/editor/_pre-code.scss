@@ -1,0 +1,17 @@
+pre {
+  background: #eee;
+  font-family: Inconsolata, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+.wp-block-verse pre, pre.wp-block-verse {
+  color: #191e23;
+  white-space: nowrap;
+  font-family: Inconsolata, monospace;
+  overflow: auto;
+}

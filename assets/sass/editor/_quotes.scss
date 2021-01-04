@@ -1,0 +1,102 @@
+.wp-block-quote {
+  position: relative;
+  padding: 0 15px;
+  text-align: left;
+  text-indent: 0;
+
+  p {
+    font-family: var(--font-body, 'Roboto');
+    line-height: 1.55;
+    font-size: 19px;
+    color: var(--text-color, #000);
+    margin: 0;
+    margin-bottom: 0px;
+    margin-bottom: 13px;
+  }
+
+  cite,
+  footer,
+  .wp-block-quote__citation {
+    line-height: 20px;
+    padding: 0 0;
+    display: inline-block;
+    color: #6c7781;
+    margin-top: 10px;
+    position: relative;
+    font-size: 15.4px;
+    font-style: normal;
+  }
+
+  &.is-large,
+  &.is-style-large {
+    p {
+      font-size: 28.5px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+    }
+
+    cite,
+    footer,
+    .wp-block-quote__citation {
+      font-size: 21.3px;
+    }
+  }
+}
+
+.wp-block-pullquote {
+  color: #40464d;
+  padding: 3em 0;
+  text-align: center;
+  blockquote {
+    margin: 0;
+  }
+  p {
+    font-family: var(--font-body, 'Roboto');
+    font-size: 33.2px;
+    line-height: 1.6;
+  }
+
+  cite,
+  footer,
+  .wp-block-pullquote__citation {
+    position: relative;
+    font-weight: normal;
+    font-size: 15.4px;
+    color: #40464d;
+  }
+
+  .wp-block[data-align="left"] &, .wp-block[data-align="right"] & {
+    width: 40%;
+    max-width: 290px;
+  }
+
+  &.alignleft, &.alignright {
+    float: none;
+    border: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    > blockquote {
+      border-top: 4px solid #555;
+      border-bottom: 4px solid #555;
+      margin-bottom: 1.75em;
+      padding: 3em 0;
+      max-width: 290px;
+    }
+
+    p {
+      font-size: 23.7px;
+    }
+  }
+  &.alignleft > blockquote {
+    float: left;
+    margin-right: 1.5rem;
+  }
+
+  &.alignright > blockquote {
+    float: right;
+    margin-left: 1.5rem;
+  }
+}

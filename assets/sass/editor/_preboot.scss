@@ -1,0 +1,40 @@
+.wp-block {
+  max-width: 790px;
+}
+
+.editor-post-title,
+.editor-post-title .editor-post-title__input {
+  max-width: 790px;
+  font-family: var(--font-header, 'Roboto');
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  word-break: break-word;
+  color: #000;
+  line-height: 1.2;
+}
+.editor-post-title .editor-post-title__input {
+  font-size: 55px;
+  font-weight: 900;
+}
+
+body {
+  line-height: 1.5;
+  color: var(--text-color, #000);
+  font-size: 19px;
+  font-family: var(--font-body, 'Roboto');
+  background-color: var(--content-bg-color, #fff);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.alignleft, .alignright {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.alignleft {
+  margin-right: 1.5em;
+}
+.alignright {
+  margin-left: 1.5em;
+}

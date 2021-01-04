@@ -1,0 +1,26 @@
+/* Latest Posts */
+ul.wp-block-latest-posts {
+  padding-left: 0;
+}
+
+/* Categories */
+.wp-block-categories {
+  .wp-block[data-align="center"] & {
+    text-align: center;
+  }
+  ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  li > ul, li > ol {
+    margin-left: 20px;
+  }
+}
+
+/* Archives */
+ul.wp-block-archives-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside;
+}

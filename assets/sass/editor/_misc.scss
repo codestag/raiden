@@ -1,0 +1,20 @@
+p.wp-block-subhead {
+  color: #413c3c;
+  font-size: 20.9px;
+}
+
+.wp-block[data-align='left'],
+.wp-block[data-align='right'],
+.alignright,
+.alignleft {
+  z-index: 12;
+  position: relative;
+}
+
+.blocks-gallery-grid .blocks-gallery-item:nth-child(5) figure:before {
+  display: none;
+}
+
+.wp-block[data-type="core/button"] {
+  display: block;
+}
