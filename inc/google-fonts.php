@@ -7,9 +7,9 @@ if ( ! function_exists( 'raiden_get_google_fonts' ) ) :
 /**
  * Return an array of all available Google Fonts.
  *
- * Updated: 2018-04-11T04:41:38+00:00.
+ * Updated: 2021-01-04T12:41:16+05:30.
  *
- * Total 877 Fonts.
+ * Total 1023 Fonts.
  *
  * @since  1.0.0.
  *
@@ -161,6 +161,30 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Alata' => array(
+			'label' => 'Alata',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Alatsi' => array(
+			'label' => 'Alatsi',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'Aldrich' => array(
 			'label' => 'Aldrich',
 			'variants' => array(
@@ -291,6 +315,22 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Aleo' => array(
+			'label' => 'Aleo',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
 		'Alex Brush' => array(
 			'label' => 'Alex Brush',
 			'variants' => array(
@@ -388,6 +428,19 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'handwriting',
+		),
+		'Almarai' => array(
+			'label' => 'Almarai',
+			'variants' => array(
+				'300',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'arabic',
+			),
+			'category' => 'sans-serif',
 		),
 		'Almendra' => array(
 			'label' => 'Almendra',
@@ -545,6 +598,21 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'cyrillic',
 				'cyrillic-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Andika New Basic' => array(
+			'label' => 'Andika New Basic',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -717,6 +785,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -729,6 +798,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'arabic',
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'serif',
 		),
@@ -755,6 +825,10 @@ function raiden_get_google_fonts() {
 		'Arimo' => array(
 			'label' => 'Arimo',
 			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'italic',
@@ -912,6 +986,7 @@ function raiden_get_google_fonts() {
 			'variants' => array(
 				'200',
 				'300',
+				'500',
 				'600',
 				'700',
 				'800',
@@ -920,6 +995,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'hebrew',
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'sans-serif',
 		),
@@ -1099,6 +1175,32 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'B612' => array(
+			'label' => 'B612',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'B612 Mono' => array(
+			'label' => 'B612 Mono',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'monospace',
+		),
 		'Bad Script' => array(
 			'label' => 'Bad Script',
 			'variants' => array(
@@ -1121,9 +1223,49 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo' => array(
-			'label' => 'Baloo',
+		'Bahianita' => array(
+			'label' => 'Bahianita',
 			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Bai Jamjuree' => array(
+			'label' => 'Bai Jamjuree',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Baloo 2' => array(
+			'label' => 'Baloo 2',
+			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1134,9 +1276,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Bhai' => array(
-			'label' => 'Baloo Bhai',
+		'Baloo Bhai 2' => array(
+			'label' => 'Baloo Bhai 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1147,22 +1293,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Bhaijaan' => array(
-			'label' => 'Baloo Bhaijaan',
+		'Baloo Bhaina 2' => array(
+			'label' => 'Baloo Bhaina 2',
 			'variants' => array(
-				'regular',
-			),
-			'subsets' => array(
-				'arabic',
-				'latin',
-				'latin-ext',
-				'vietnamese',
-			),
-			'category' => 'display',
-		),
-		'Baloo Bhaina' => array(
-			'label' => 'Baloo Bhaina',
-			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1173,9 +1310,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Chettan' => array(
-			'label' => 'Baloo Chettan',
+		'Baloo Chettan 2' => array(
+			'label' => 'Baloo Chettan 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1186,9 +1327,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Da' => array(
-			'label' => 'Baloo Da',
+		'Baloo Da 2' => array(
+			'label' => 'Baloo Da 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1199,9 +1344,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Paaji' => array(
-			'label' => 'Baloo Paaji',
+		'Baloo Paaji 2' => array(
+			'label' => 'Baloo Paaji 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1212,9 +1361,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Tamma' => array(
-			'label' => 'Baloo Tamma',
+		'Baloo Tamma 2' => array(
+			'label' => 'Baloo Tamma 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1225,9 +1378,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Tammudu' => array(
-			'label' => 'Baloo Tammudu',
+		'Baloo Tammudu 2' => array(
+			'label' => 'Baloo Tammudu 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1238,9 +1395,13 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
-		'Baloo Thambi' => array(
-			'label' => 'Baloo Thambi',
+		'Baloo Thambi 2' => array(
+			'label' => 'Baloo Thambi 2',
 			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -1248,6 +1409,22 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 				'tamil',
 				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Balsamiq Sans' => array(
+			'label' => 'Balsamiq Sans',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'latin',
+				'latin-ext',
 			),
 			'category' => 'display',
 		),
@@ -1298,6 +1475,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -1326,6 +1504,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -1354,8 +1533,21 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
+		),
+		'Barriecito' => array(
+			'label' => 'Barriecito',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
 		),
 		'Barrio' => array(
 			'label' => 'Barrio',
@@ -1378,6 +1570,18 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'sans-serif',
+		),
+		'Baskervville' => array(
+			'label' => 'Baskervville',
+			'variants' => array(
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
 		),
 		'Battambang' => array(
 			'label' => 'Battambang',
@@ -1407,6 +1611,42 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'khmer',
+			),
+			'category' => 'display',
+		),
+		'Be Vietnam' => array(
+			'label' => 'Be Vietnam',
+			'variants' => array(
+				'100',
+				'100italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Bebas Neue' => array(
+			'label' => 'Bebas Neue',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
 			),
 			'category' => 'display',
 		),
@@ -1443,6 +1683,42 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Bellota' => array(
+			'label' => 'Bellota',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Bellota Text' => array(
+			'label' => 'Bellota Text',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'BenchNine' => array(
 			'label' => 'BenchNine',
 			'variants' => array(
@@ -1477,9 +1753,133 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Beth Ellen' => array(
+			'label' => 'Beth Ellen',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Bevan' => array(
 			'label' => 'Bevan',
 			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Display' => array(
+			'label' => 'Big Shoulders Display',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Inline Display' => array(
+			'label' => 'Big Shoulders Inline Display',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Inline Text' => array(
+			'label' => 'Big Shoulders Inline Text',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Stencil Display' => array(
+			'label' => 'Big Shoulders Stencil Display',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Stencil Text' => array(
+			'label' => 'Big Shoulders Stencil Text',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Big Shoulders Text' => array(
+			'label' => 'Big Shoulders Text',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
 				'regular',
 			),
 			'subsets' => array(
@@ -1583,13 +1983,31 @@ function raiden_get_google_fonts() {
 		'Bitter' => array(
 			'label' => 'Bitter',
 			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
 				'italic',
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'serif',
 		),
@@ -1625,6 +2043,24 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'display',
+		),
+		'Blinker' => array(
+			'label' => 'Blinker',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Bokor' => array(
 			'label' => 'Bokor',
@@ -1906,6 +2342,32 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Caladea' => array(
+			'label' => 'Caladea',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
+		'Calistoga' => array(
+			'label' => 'Calistoga',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'Calligraffitti' => array(
 			'label' => 'Calligraffitti',
 			'variants' => array(
@@ -2052,6 +2514,18 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Castoro' => array(
+			'label' => 'Castoro',
+			'variants' => array(
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
 		'Catamaran' => array(
 			'label' => 'Catamaran',
 			'variants' => array(
@@ -2091,11 +2565,14 @@ function raiden_get_google_fonts() {
 		'Caveat' => array(
 			'label' => 'Caveat',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
 			'subsets' => array(
 				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
 			),
@@ -2132,6 +2609,28 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'display',
+		),
+		'Chakra Petch' => array(
+			'label' => 'Chakra Petch',
+			'variants' => array(
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Changa' => array(
 			'label' => 'Changa',
@@ -2172,6 +2671,34 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'display',
+		),
+		'Charm' => array(
+			'label' => 'Charm',
+			'variants' => array(
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'handwriting',
+		),
+		'Charmonman' => array(
+			'label' => 'Charmonman',
+			'variants' => array(
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'handwriting',
 		),
 		'Chathura' => array(
 			'label' => 'Chathura',
@@ -2275,6 +2802,17 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Chilanka' => array(
+			'label' => 'Chilanka',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'malayalam',
+			),
+			'category' => 'handwriting',
+		),
 		'Chivo' => array(
 			'label' => 'Chivo',
 			'variants' => array(
@@ -2309,7 +2847,10 @@ function raiden_get_google_fonts() {
 		'Cinzel' => array(
 			'label' => 'Cinzel',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
+				'800',
 				'900',
 				'regular',
 			),
@@ -2405,6 +2946,8 @@ function raiden_get_google_fonts() {
 			'label' => 'Comfortaa',
 			'variants' => array(
 				'300',
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -2418,6 +2961,21 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Comic Neue' => array(
+			'label' => 'Comic Neue',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Coming Soon' => array(
 			'label' => 'Coming Soon',
 			'variants' => array(
@@ -2427,6 +2985,29 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'handwriting',
+		),
+		'Commissioner' => array(
+			'label' => 'Commissioner',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Concert One' => array(
 			'label' => 'Concert One',
@@ -2645,6 +3226,20 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Courier Prime' => array(
+			'label' => 'Courier Prime',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'monospace',
+		),
 		'Cousine' => array(
 			'label' => 'Cousine',
 			'variants' => array(
@@ -2718,6 +3313,33 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Crimson Pro' => array(
+			'label' => 'Crimson Pro',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
 		'Crimson Text' => array(
 			'label' => 'Crimson Text',
 			'variants' => array(
@@ -2757,6 +3379,10 @@ function raiden_get_google_fonts() {
 		'Cuprum' => array(
 			'label' => 'Cuprum',
 			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'italic',
@@ -2804,6 +3430,62 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'monospace',
 		),
+		'DM Mono' => array(
+			'label' => 'DM Mono',
+			'variants' => array(
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'monospace',
+		),
+		'DM Sans' => array(
+			'label' => 'DM Sans',
+			'variants' => array(
+				'500',
+				'500italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'DM Serif Display' => array(
+			'label' => 'DM Serif Display',
+			'variants' => array(
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
+		'DM Serif Text' => array(
+			'label' => 'DM Serif Text',
+			'variants' => array(
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
 		'Damion' => array(
 			'label' => 'Damion',
 			'variants' => array(
@@ -2817,6 +3499,8 @@ function raiden_get_google_fonts() {
 		'Dancing Script' => array(
 			'label' => 'Dancing Script',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -2836,6 +3520,24 @@ function raiden_get_google_fonts() {
 				'khmer',
 			),
 			'category' => 'display',
+		),
+		'Darker Grotesque' => array(
+			'label' => 'Darker Grotesque',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'David Libre' => array(
 			'label' => 'David Libre',
@@ -3020,6 +3722,8 @@ function raiden_get_google_fonts() {
 		'Domine' => array(
 			'label' => 'Domine',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -3075,6 +3779,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -3394,6 +4099,8 @@ function raiden_get_google_fonts() {
 		'Enriqueta' => array(
 			'label' => 'Enriqueta',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -3402,6 +4109,35 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'serif',
+		),
+		'Epilogue' => array(
+			'label' => 'Epilogue',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Erica One' => array(
 			'label' => 'Erica One',
@@ -3500,8 +4236,10 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -3522,6 +4260,30 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Fahkwang' => array(
+			'label' => 'Fahkwang',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'Fanwood Text' => array(
 			'label' => 'Fanwood Text',
 			'variants' => array(
@@ -3532,6 +4294,20 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'serif',
+		),
+		'Farro' => array(
+			'label' => 'Farro',
+			'variants' => array(
+				'300',
+				'500',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Farsan' => array(
 			'label' => 'Farsan',
@@ -3667,6 +4443,25 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'display',
+		),
+		'Fira Code' => array(
+			'label' => 'Fira Code',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'monospace',
 		),
 		'Fira Mono' => array(
 			'label' => 'Fira Mono',
@@ -3823,6 +4618,7 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'display',
 		),
@@ -3907,6 +4703,7 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'display',
 		),
@@ -4074,6 +4871,38 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Gayathri' => array(
+			'label' => 'Gayathri',
+			'variants' => array(
+				'100',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'malayalam',
+			),
+			'category' => 'sans-serif',
+		),
+		'Gelasio' => array(
+			'label' => 'Gelasio',
+			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
 		'Gentium Basic' => array(
 			'label' => 'Gentium Basic',
 			'variants' => array(
@@ -4165,6 +4994,17 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Girassol' => array(
+			'label' => 'Girassol',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'display',
+		),
 		'Give You Glory' => array(
 			'label' => 'Give You Glory',
 			'variants' => array(
@@ -4229,6 +5069,19 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Goldman' => array(
+			'label' => 'Goldman',
+			'variants' => array(
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'Gorditas' => array(
 			'label' => 'Gorditas',
 			'variants' => array(
@@ -4256,6 +5109,19 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'korean',
 				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Gotu' => array(
+			'label' => 'Gotu',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'devanagari',
+				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -4290,6 +5156,35 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Grandstander' => array(
+			'label' => 'Grandstander',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'Gravitas One' => array(
 			'label' => 'Gravitas One',
 			'variants' => array(
@@ -4310,6 +5205,55 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'handwriting',
+		),
+		'Grenze' => array(
+			'label' => 'Grenze',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
+		'Grenze Gotisch' => array(
+			'label' => 'Grenze Gotisch',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
 		),
 		'Griffy' => array(
 			'label' => 'Griffy',
@@ -4356,6 +5300,18 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'display',
+		),
+		'Gupter' => array(
+			'label' => 'Gupter',
+			'variants' => array(
+				'500',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'serif',
 		),
 		'Gurajada' => array(
 			'label' => 'Gurajada',
@@ -4463,11 +5419,13 @@ function raiden_get_google_fonts() {
 		'Harmattan' => array(
 			'label' => 'Harmattan',
 			'variants' => array(
+				'700',
 				'regular',
 			),
 			'subsets' => array(
 				'arabic',
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'sans-serif',
 		),
@@ -4486,8 +5444,10 @@ function raiden_get_google_fonts() {
 			'label' => 'Heebo',
 			'variants' => array(
 				'100',
+				'200',
 				'300',
 				'500',
+				'600',
 				'700',
 				'800',
 				'900',
@@ -4508,6 +5468,26 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'display',
+		),
+		'Hepta Slab' => array(
+			'label' => 'Hepta Slab',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
 		),
 		'Herr Von Muellerhoff' => array(
 			'label' => 'Herr Von Muellerhoff',
@@ -4689,6 +5669,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'cyrillic',
 				'cyrillic-ext',
+				'greek',
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -4852,6 +5833,24 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Ibarra Real Nova' => array(
+			'label' => 'Ibarra Real Nova',
+			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
 		'Iceberg' => array(
 			'label' => 'Iceberg',
 			'variants' => array(
@@ -4886,7 +5885,13 @@ function raiden_get_google_fonts() {
 		'Inconsolata' => array(
 			'label' => 'Inconsolata',
 			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
 				'700',
+				'800',
+				'900',
 				'regular',
 			),
 			'subsets' => array(
@@ -4946,6 +5951,62 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'serif',
+		),
+		'Inria Sans' => array(
+			'label' => 'Inria Sans',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Inria Serif' => array(
+			'label' => 'Inria Serif',
+			'variants' => array(
+				'300',
+				'300italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
+		'Inter' => array(
+			'label' => 'Inter',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Irish Grover' => array(
 			'label' => 'Irish Grover',
@@ -5040,6 +6101,36 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'JetBrains Mono' => array(
+			'label' => 'JetBrains Mono',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'monospace',
+		),
 		'Jim Nightshade' => array(
 			'label' => 'Jim Nightshade',
 			'variants' => array(
@@ -5085,13 +6176,28 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Jomolhari' => array(
+			'label' => 'Jomolhari',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'tibetan',
+			),
+			'category' => 'serif',
+		),
 		'Josefin Sans' => array(
 			'label' => 'Josefin Sans',
 			'variants' => array(
 				'100',
 				'100italic',
+				'200',
+				'200italic',
 				'300',
 				'300italic',
+				'500',
+				'500italic',
 				'600',
 				'600italic',
 				'700',
@@ -5111,8 +6217,12 @@ function raiden_get_google_fonts() {
 			'variants' => array(
 				'100',
 				'100italic',
+				'200',
+				'200italic',
 				'300',
 				'300italic',
+				'500',
+				'500italic',
 				'600',
 				'600italic',
 				'700',
@@ -5124,6 +6234,35 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'serif',
+		),
+		'Jost' => array(
+			'label' => 'Jost',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Joti One' => array(
 			'label' => 'Joti One',
@@ -5233,6 +6372,34 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'K2D' => array(
+			'label' => 'K2D',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'Kadwa' => array(
 			'label' => 'Kadwa',
 			'variants' => array(
@@ -5315,8 +6482,18 @@ function raiden_get_google_fonts() {
 		'Karla' => array(
 			'label' => 'Karla',
 			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
+				'800',
+				'800italic',
 				'italic',
 				'regular',
 			),
@@ -5505,6 +6682,78 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'KoHo' => array(
+			'label' => 'KoHo',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Kodchasan' => array(
+			'label' => 'Kodchasan',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Kosugi' => array(
+			'label' => 'Kosugi',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'japanese',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Kosugi Maru' => array(
+			'label' => 'Kosugi Maru',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'japanese',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Kotta One' => array(
 			'label' => 'Kotta One',
 			'variants' => array(
@@ -5540,11 +6789,14 @@ function raiden_get_google_fonts() {
 			'label' => 'Kreon',
 			'variants' => array(
 				'300',
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
 			),
 			'category' => 'serif',
 		),
@@ -5561,6 +6813,74 @@ function raiden_get_google_fonts() {
 		'Krona One' => array(
 			'label' => 'Krona One',
 			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Krub' => array(
+			'label' => 'Krub',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Kufam' => array(
+			'label' => 'Kufam',
+			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'arabic',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Kulim Park' => array(
+			'label' => 'Kulim Park',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
 				'regular',
 			),
 			'subsets' => array(
@@ -5593,6 +6913,19 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Kumbh Sans' => array(
+			'label' => 'Kumbh Sans',
+			'variants' => array(
+				'300',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
 		'Kurale' => array(
 			'label' => 'Kurale',
 			'variants' => array(
@@ -5616,6 +6949,16 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'handwriting',
+		),
+		'Lacquer' => array(
+			'label' => 'Lacquer',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Laila' => array(
 			'label' => 'Laila',
@@ -5663,6 +7006,18 @@ function raiden_get_google_fonts() {
 				'regular',
 			),
 			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'display',
+		),
+		'Langar' => array(
+			'label' => 'Langar',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'gurmukhi',
 				'latin',
 				'latin-ext',
 			),
@@ -5758,6 +7113,7 @@ function raiden_get_google_fonts() {
 			'label' => 'Lemonada',
 			'variants' => array(
 				'300',
+				'500',
 				'600',
 				'700',
 				'regular',
@@ -5769,6 +7125,90 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'display',
+		),
+		'Lexend Deca' => array(
+			'label' => 'Lexend Deca',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Exa' => array(
+			'label' => 'Lexend Exa',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Giga' => array(
+			'label' => 'Lexend Giga',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Mega' => array(
+			'label' => 'Lexend Mega',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Peta' => array(
+			'label' => 'Lexend Peta',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Tera' => array(
+			'label' => 'Lexend Tera',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Lexend Zetta' => array(
+			'label' => 'Lexend Zetta',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Libre Barcode 128' => array(
 			'label' => 'Libre Barcode 128',
@@ -5830,8 +7270,42 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Libre Barcode EAN13 Text' => array(
+			'label' => 'Libre Barcode EAN13 Text',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'display',
+		),
 		'Libre Baskerville' => array(
 			'label' => 'Libre Baskerville',
+			'variants' => array(
+				'700',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
+		'Libre Caslon Display' => array(
+			'label' => 'Libre Caslon Display',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'serif',
+		),
+		'Libre Caslon Text' => array(
+			'label' => 'Libre Caslon Text',
 			'variants' => array(
 				'700',
 				'italic',
@@ -5868,6 +7342,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -5875,6 +7350,7 @@ function raiden_get_google_fonts() {
 			'label' => 'Life Savers',
 			'variants' => array(
 				'700',
+				'800',
 				'regular',
 			),
 			'subsets' => array(
@@ -5926,6 +7402,75 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'serif',
+		),
+		'Literata' => array(
+			'label' => 'Literata',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
+		'Liu Jian Mao Cao' => array(
+			'label' => 'Liu Jian Mao Cao',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
+		'Livvic' => array(
+			'label' => 'Livvic',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Lobster' => array(
 			'label' => 'Lobster',
@@ -5997,9 +7542,24 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Long Cang' => array(
+			'label' => 'Long Cang',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
 		'Lora' => array(
 			'label' => 'Lora',
 			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'italic',
@@ -6075,6 +7635,65 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'serif',
+		),
+		'M PLUS 1p' => array(
+			'label' => 'M PLUS 1p',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'hebrew',
+				'japanese',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'M PLUS Rounded 1c' => array(
+			'label' => 'M PLUS Rounded 1c',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'hebrew',
+				'japanese',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Ma Shan Zheng' => array(
+			'label' => 'Ma Shan Zheng',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'handwriting',
 		),
 		'Macondo' => array(
 			'label' => 'Macondo',
@@ -6153,6 +7772,18 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'Major Mono Display' => array(
+			'label' => 'Major Mono Display',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'monospace',
+		),
 		'Mako' => array(
 			'label' => 'Mako',
 			'variants' => array(
@@ -6162,6 +7793,30 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'sans-serif',
+		),
+		'Mali' => array(
+			'label' => 'Mali',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'handwriting',
 		),
 		'Mallanna' => array(
 			'label' => 'Mallanna',
@@ -6184,6 +7839,48 @@ function raiden_get_google_fonts() {
 				'telugu',
 			),
 			'category' => 'sans-serif',
+		),
+		'Manjari' => array(
+			'label' => 'Manjari',
+			'variants' => array(
+				'100',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'malayalam',
+			),
+			'category' => 'sans-serif',
+		),
+		'Manrope' => array(
+			'label' => 'Manrope',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'greek',
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Mansalva' => array(
+			'label' => 'Mansalva',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'handwriting',
 		),
 		'Manuale' => array(
 			'label' => 'Manuale',
@@ -6248,6 +7945,22 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'display',
+		),
+		'Markazi Text' => array(
+			'label' => 'Markazi Text',
+			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'arabic',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
 		),
 		'Marko One' => array(
 			'label' => 'Marko One',
@@ -6345,7 +8058,9 @@ function raiden_get_google_fonts() {
 			'label' => 'Maven Pro',
 			'variants' => array(
 				'500',
+				'600',
 				'700',
+				'800',
 				'900',
 				'regular',
 			),
@@ -6478,6 +8193,10 @@ function raiden_get_google_fonts() {
 			'variants' => array(
 				'300',
 				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'800',
@@ -6486,8 +8205,10 @@ function raiden_get_google_fonts() {
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -6530,6 +8251,8 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -7016,13 +8739,15 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
-		'Muli' => array(
-			'label' => 'Muli',
+		'Mulish' => array(
+			'label' => 'Mulish',
 			'variants' => array(
 				'200',
 				'200italic',
 				'300',
 				'300italic',
+				'500',
+				'500italic',
 				'600',
 				'600italic',
 				'700',
@@ -7040,6 +8765,26 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'sans-serif',
+		),
+		'MuseoModerno' => array(
+			'label' => 'MuseoModerno',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
 		),
 		'Mystery Quest' => array(
 			'label' => 'Mystery Quest',
@@ -7123,6 +8868,17 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Nerko One' => array(
+			'label' => 'Nerko One',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'handwriting',
+		),
 		'Neucha' => array(
 			'label' => 'Neucha',
 			'variants' => array(
@@ -7184,6 +8940,30 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Niramit' => array(
+			'label' => 'Niramit',
+			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'Nixie One' => array(
 			'label' => 'Nixie One',
 			'variants' => array(
@@ -7243,6 +9023,16 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Notable' => array(
+			'label' => 'Notable',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Nothing You Could Do' => array(
 			'label' => 'Nothing You Could Do',
 			'variants' => array(
@@ -7288,6 +9078,86 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Noto Sans HK' => array(
+			'label' => 'Noto Sans HK',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-hongkong',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Noto Sans JP' => array(
+			'label' => 'Noto Sans JP',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'japanese',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Noto Sans KR' => array(
+			'label' => 'Noto Sans KR',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Noto Sans SC' => array(
+			'label' => 'Noto Sans SC',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
+		'Noto Sans TC' => array(
+			'label' => 'Noto Sans TC',
+			'variants' => array(
+				'100',
+				'300',
+				'500',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-traditional',
+				'latin',
+			),
+			'category' => 'sans-serif',
+		),
 		'Noto Serif' => array(
 			'label' => 'Noto Serif',
 			'variants' => array(
@@ -7304,6 +9174,74 @@ function raiden_get_google_fonts() {
 				'latin',
 				'latin-ext',
 				'vietnamese',
+			),
+			'category' => 'serif',
+		),
+		'Noto Serif JP' => array(
+			'label' => 'Noto Serif JP',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'japanese',
+				'latin',
+			),
+			'category' => 'serif',
+		),
+		'Noto Serif KR' => array(
+			'label' => 'Noto Serif KR',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
+				'latin',
+			),
+			'category' => 'serif',
+		),
+		'Noto Serif SC' => array(
+			'label' => 'Noto Serif SC',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'serif',
+		),
+		'Noto Serif TC' => array(
+			'label' => 'Noto Serif TC',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-traditional',
+				'latin',
 			),
 			'category' => 'serif',
 		),
@@ -7417,6 +9355,8 @@ function raiden_get_google_fonts() {
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -7447,6 +9387,16 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'sans-serif',
+		),
+		'Odibee Sans' => array(
+			'label' => 'Odibee Sans',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Odor Mean Chey' => array(
 			'label' => 'Odor Mean Chey',
@@ -7579,7 +9529,9 @@ function raiden_get_google_fonts() {
 			'label' => 'Orbitron',
 			'variants' => array(
 				'500',
+				'600',
 				'700',
+				'800',
 				'900',
 				'regular',
 			),
@@ -7633,6 +9585,7 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -7725,6 +9678,23 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'serif',
+		),
+		'Oxanium' => array(
+			'label' => 'Oxanium',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'display',
 		),
 		'Oxygen' => array(
 			'label' => 'Oxygen',
@@ -7844,6 +9814,7 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -8083,10 +10054,29 @@ function raiden_get_google_fonts() {
 		'Petrona' => array(
 			'label' => 'Petrona',
 			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
 				'regular',
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'serif',
 		),
@@ -8105,6 +10095,39 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'sans-serif',
+		),
+		'Piazzolla' => array(
+			'label' => 'Piazzolla',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'greek-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
 		),
 		'Piedra' => array(
 			'label' => 'Piedra',
@@ -8179,8 +10202,14 @@ function raiden_get_google_fonts() {
 		'Playfair Display' => array(
 			'label' => 'Playfair Display',
 			'variants' => array(
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
+				'800',
+				'800italic',
 				'900',
 				'900italic',
 				'italic',
@@ -8495,6 +10524,34 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Public Sans' => array(
+			'label' => 'Public Sans',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
 		'Puritan' => array(
 			'label' => 'Puritan',
 			'variants' => array(
@@ -8576,6 +10633,8 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -8584,6 +10643,7 @@ function raiden_get_google_fonts() {
 			'variants' => array(
 				'300',
 				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -8690,8 +10750,11 @@ function raiden_get_google_fonts() {
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -8821,6 +10884,73 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'telugu',
+			),
+			'category' => 'display',
+		),
+		'Recursive' => array(
+			'label' => 'Recursive',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Red Hat Display' => array(
+			'label' => 'Red Hat Display',
+			'variants' => array(
+				'500',
+				'500italic',
+				'700',
+				'700italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Red Hat Text' => array(
+			'label' => 'Red Hat Text',
+			'variants' => array(
+				'500',
+				'500italic',
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Red Rose' => array(
+			'label' => 'Red Rose',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'display',
 		),
@@ -8975,10 +11105,14 @@ function raiden_get_google_fonts() {
 			'variants' => array(
 				'100',
 				'100italic',
+				'200',
+				'200italic',
 				'300',
 				'300italic',
 				'500',
 				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'italic',
@@ -8988,7 +11122,6 @@ function raiden_get_google_fonts() {
 				'cyrillic',
 				'cyrillic-ext',
 				'greek',
-				'greek-ext',
 				'latin',
 				'latin-ext',
 				'vietnamese',
@@ -8999,8 +11132,13 @@ function raiden_get_google_fonts() {
 			'label' => 'Roboto Slab',
 			'variants' => array(
 				'100',
+				'200',
 				'300',
+				'500',
+				'600',
 				'700',
+				'800',
+				'900',
 				'regular',
 			),
 			'subsets' => array(
@@ -9080,6 +11218,12 @@ function raiden_get_google_fonts() {
 		'Rosario' => array(
 			'label' => 'Rosario',
 			'variants' => array(
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
 				'italic',
@@ -9087,6 +11231,8 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -9112,6 +11258,20 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Rowdies' => array(
+			'label' => 'Rowdies',
+			'variants' => array(
+				'300',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'Rozha One' => array(
 			'label' => 'Rozha One',
 			'variants' => array(
@@ -9131,8 +11291,12 @@ function raiden_get_google_fonts() {
 				'300italic',
 				'500',
 				'500italic',
+				'600',
+				'600italic',
 				'700',
 				'700italic',
+				'800',
+				'800italic',
 				'900',
 				'900italic',
 				'italic',
@@ -9140,6 +11304,7 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'cyrillic',
+				'cyrillic-ext',
 				'hebrew',
 				'latin',
 				'latin-ext',
@@ -9161,13 +11326,18 @@ function raiden_get_google_fonts() {
 		'Ruda' => array(
 			'label' => 'Ruda',
 			'variants' => array(
+				'500',
+				'600',
 				'700',
+				'800',
 				'900',
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -9376,6 +11546,18 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Saira Stencil One' => array(
+			'label' => 'Saira Stencil One',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
 		'Salsa' => array(
 			'label' => 'Salsa',
 			'variants' => array(
@@ -9424,6 +11606,52 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Sansita Swashed' => array(
+			'label' => 'Sansita Swashed',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Sarabun' => array(
+			'label' => 'Sarabun',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -9477,6 +11705,32 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'handwriting',
+		),
+		'Sawarabi Gothic' => array(
+			'label' => 'Sawarabi Gothic',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'japanese',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
+		'Sawarabi Mincho' => array(
+			'label' => 'Sawarabi Mincho',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'japanese',
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Scada' => array(
 			'label' => 'Scada',
@@ -9573,6 +11827,19 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'handwriting',
+		),
+		'Sen' => array(
+			'label' => 'Sen',
+			'variants' => array(
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Sevillana' => array(
 			'label' => 'Sevillana',
@@ -9721,6 +11988,7 @@ function raiden_get_google_fonts() {
 			'label' => 'Signika',
 			'variants' => array(
 				'300',
+				'500',
 				'600',
 				'700',
 				'regular',
@@ -9728,6 +11996,7 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
 		),
@@ -9756,6 +12025,16 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+			),
+			'category' => 'display',
+		),
+		'Single Day' => array(
+			'label' => 'Single Day',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'korean',
 			),
 			'category' => 'display',
 		),
@@ -9908,6 +12187,20 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Solway' => array(
+			'label' => 'Solway',
+			'variants' => array(
+				'300',
+				'500',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+			),
+			'category' => 'serif',
+		),
 		'Song Myung' => array(
 			'label' => 'Song Myung',
 			'variants' => array(
@@ -9930,6 +12223,24 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'display',
 		),
+		'Sora' => array(
+			'label' => 'Sora',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
 		'Sorts Mill Goudy' => array(
 			'label' => 'Sorts Mill Goudy',
 			'variants' => array(
@@ -9946,16 +12257,27 @@ function raiden_get_google_fonts() {
 			'label' => 'Source Code Pro',
 			'variants' => array(
 				'200',
+				'200italic',
 				'300',
+				'300italic',
 				'500',
+				'500italic',
 				'600',
+				'600italic',
 				'700',
+				'700italic',
 				'900',
+				'900italic',
+				'italic',
 				'regular',
 			),
 			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'monospace',
 		),
@@ -9989,6 +12311,34 @@ function raiden_get_google_fonts() {
 		'Source Serif Pro' => array(
 			'label' => 'Source Serif Pro',
 			'variants' => array(
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'greek',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
+		'Space Grotesk' => array(
+			'label' => 'Space Grotesk',
+			'variants' => array(
+				'300',
+				'500',
 				'600',
 				'700',
 				'regular',
@@ -9996,8 +12346,9 @@ function raiden_get_google_fonts() {
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
-			'category' => 'serif',
+			'category' => 'sans-serif',
 		),
 		'Space Mono' => array(
 			'label' => 'Space Mono',
@@ -10013,6 +12364,25 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'monospace',
+		),
+		'Spartan' => array(
+			'label' => 'Spartan',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'900',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Special Elite' => array(
 			'label' => 'Special Elite',
@@ -10141,6 +12511,31 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'handwriting',
 		),
+		'Srisakdi' => array(
+			'label' => 'Srisakdi',
+			'variants' => array(
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Staatliches' => array(
+			'label' => 'Staatliches',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'display',
+		),
 		'Stalemate' => array(
 			'label' => 'Stalemate',
 			'variants' => array(
@@ -10251,6 +12646,19 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'serif',
+		),
+		'Sulphur Point' => array(
+			'label' => 'Sulphur Point',
+			'variants' => array(
+				'300',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
 		),
 		'Sumana' => array(
 			'label' => 'Sumana',
@@ -10363,6 +12771,43 @@ function raiden_get_google_fonts() {
 				'latin',
 			),
 			'category' => 'sans-serif',
+		),
+		'Syne' => array(
+			'label' => 'Syne',
+			'variants' => array(
+				'500',
+				'600',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
+		'Syne Mono' => array(
+			'label' => 'Syne Mono',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'monospace',
+		),
+		'Syne Tactile' => array(
+			'label' => 'Syne Tactile',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'display',
 		),
 		'Tajawal' => array(
 			'label' => 'Tajawal',
@@ -10504,6 +12949,51 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Texturina' => array(
+			'label' => 'Texturina',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'serif',
+		),
+		'Thasadith' => array(
+			'label' => 'Thasadith',
+			'variants' => array(
+				'700',
+				'700italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'thai',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'The Girl Next Door' => array(
 			'label' => 'The Girl Next Door',
 			'variants' => array(
@@ -10605,6 +13095,34 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Tomorrow' => array(
+			'label' => 'Tomorrow',
+			'variants' => array(
+				'100',
+				'100italic',
+				'200',
+				'200italic',
+				'300',
+				'300italic',
+				'500',
+				'500italic',
+				'600',
+				'600italic',
+				'700',
+				'700italic',
+				'800',
+				'800italic',
+				'900',
+				'900italic',
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+			),
+			'category' => 'sans-serif',
+		),
 		'Trade Winds' => array(
 			'label' => 'Trade Winds',
 			'variants' => array(
@@ -10644,6 +13162,25 @@ function raiden_get_google_fonts() {
 				'vietnamese',
 			),
 			'category' => 'serif',
+		),
+		'Trispace' => array(
+			'label' => 'Trispace',
+			'variants' => array(
+				'100',
+				'200',
+				'300',
+				'500',
+				'600',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
 		),
 		'Trocchi' => array(
 			'label' => 'Trocchi',
@@ -10686,6 +13223,22 @@ function raiden_get_google_fonts() {
 			),
 			'subsets' => array(
 				'latin',
+			),
+			'category' => 'display',
+		),
+		'Turret Road' => array(
+			'label' => 'Turret Road',
+			'variants' => array(
+				'200',
+				'300',
+				'500',
+				'700',
+				'800',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
 			),
 			'category' => 'display',
 		),
@@ -10889,6 +13442,22 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'sans-serif',
 		),
+		'Varta' => array(
+			'label' => 'Varta',
+			'variants' => array(
+				'300',
+				'500',
+				'600',
+				'700',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'sans-serif',
+		),
 		'Vast Shadow' => array(
 			'label' => 'Vast Shadow',
 			'variants' => array(
@@ -10913,6 +13482,31 @@ function raiden_get_google_fonts() {
 				'latin-ext',
 			),
 			'category' => 'serif',
+		),
+		'Viaoda Libre' => array(
+			'label' => 'Viaoda Libre',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'cyrillic',
+				'cyrillic-ext',
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'display',
+		),
+		'Vibes' => array(
+			'label' => 'Vibes',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'arabic',
+				'latin',
+			),
+			'category' => 'display',
 		),
 		'Vibur' => array(
 			'label' => 'Vibur',
@@ -10972,10 +13566,14 @@ function raiden_get_google_fonts() {
 		'Vollkorn' => array(
 			'label' => 'Vollkorn',
 			'variants' => array(
+				'500',
+				'500italic',
 				'600',
 				'600italic',
 				'700',
 				'700italic',
+				'800',
+				'800italic',
 				'900',
 				'900italic',
 				'italic',
@@ -11095,26 +13693,51 @@ function raiden_get_google_fonts() {
 			'label' => 'Work Sans',
 			'variants' => array(
 				'100',
+				'100italic',
 				'200',
+				'200italic',
 				'300',
+				'300italic',
 				'500',
+				'500italic',
 				'600',
+				'600italic',
 				'700',
+				'700italic',
 				'800',
+				'800italic',
 				'900',
+				'900italic',
+				'italic',
 				'regular',
 			),
 			'subsets' => array(
 				'latin',
 				'latin-ext',
+				'vietnamese',
 			),
 			'category' => 'sans-serif',
+		),
+		'Xanh Mono' => array(
+			'label' => 'Xanh Mono',
+			'variants' => array(
+				'italic',
+				'regular',
+			),
+			'subsets' => array(
+				'latin',
+				'latin-ext',
+				'vietnamese',
+			),
+			'category' => 'monospace',
 		),
 		'Yanone Kaffeesatz' => array(
 			'label' => 'Yanone Kaffeesatz',
 			'variants' => array(
 				'200',
 				'300',
+				'500',
+				'600',
 				'700',
 				'regular',
 			),
@@ -11215,12 +13838,56 @@ function raiden_get_google_fonts() {
 			),
 			'category' => 'serif',
 		),
+		'ZCOOL KuaiLe' => array(
+			'label' => 'ZCOOL KuaiLe',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'display',
+		),
+		'ZCOOL QingKe HuangYou' => array(
+			'label' => 'ZCOOL QingKe HuangYou',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'display',
+		),
+		'ZCOOL XiaoWei' => array(
+			'label' => 'ZCOOL XiaoWei',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
+				'latin',
+			),
+			'category' => 'serif',
+		),
 		'Zeyada' => array(
 			'label' => 'Zeyada',
 			'variants' => array(
 				'regular',
 			),
 			'subsets' => array(
+				'latin',
+			),
+			'category' => 'handwriting',
+		),
+		'Zhi Mang Xing' => array(
+			'label' => 'Zhi Mang Xing',
+			'variants' => array(
+				'regular',
+			),
+			'subsets' => array(
+				'chinese-simplified',
 				'latin',
 			),
 			'category' => 'handwriting',
