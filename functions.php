@@ -10,7 +10,7 @@
 /**
  * The current version of the theme.
  */
-define( 'RAIDEN_VERSION', '1.2.0' );
+define( 'RAIDEN_VERSION', '1.2.1' );
 
 /**
  * Set the content width based on the theme's design and stylesheet.

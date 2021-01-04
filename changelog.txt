@@ -1,3 +1,13 @@
+### Raiden Changelog
+
+## 1.2.1 - January 04, 2021
+* Compatibility with WordPress 5.6.x
+* Improved Block editor support
+* Update Google fonts library - 140+ new fonts
+* Improved font controls at Customizer
+* Fix output escaping & translation issues
+* Other minor improvements
+
 ## 1.2.0
 * Compatible with WordPress v5.1
 * Remove fitvids dependency
