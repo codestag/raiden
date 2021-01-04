@@ -20,11 +20,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+			?>
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/**
 				 * Run the loop for the search to output the results.
@@ -39,13 +41,16 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 
-		<?php if ( have_posts() ) :
+		<?php
+		if ( have_posts() ) :
 			the_posts_navigation();
-		endif; ?>
+		endif;
+		?>
 	</section><!-- #primary -->
 
 <?php
