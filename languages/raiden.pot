@@ -29,30 +29,30 @@ msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:51
+#: 404.php:53
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:31
+#: comments.php:32
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:40, comments.php:62
+#: comments.php:41, comments.php:65
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43, comments.php:65
+#: comments.php:44, comments.php:68
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:44, comments.php:66
+#: comments.php:45, comments.php:69
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:79
+#: comments.php:83
 msgid "Comments are closed."
 msgstr ""
 
@@ -92,107 +92,107 @@ msgstr ""
 msgid "Menu and widgets"
 msgstr ""
 
-#: inc/customizer.php:24
+#: inc/customizer.php:26
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:25
+#: inc/customizer.php:27
 msgid "Configure your theme settings"
 msgstr ""
 
-#: inc/customizer.php:30
+#: inc/customizer.php:35
 msgid "Color Schemes"
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/customizer.php:52
 msgid "Base Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:49
+#: inc/customizer.php:65
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:85
 msgid "Sidebar Background Color"
 msgstr ""
 
-#: inc/customizer.php:71
+#: inc/customizer.php:105
 msgid "Sidebar Text Color"
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:125
 msgid "Content Background Color"
 msgstr ""
 
-#: inc/customizer.php:93
+#: inc/customizer.php:145
 msgid "Content Text Color"
 msgstr ""
 
-#: inc/customizer.php:104
+#: inc/customizer.php:165
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:185
 msgid "Button Color"
 msgstr ""
 
-#: inc/customizer.php:121, inc/customizer.php:132
+#: inc/customizer.php:195, inc/customizer.php:214
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:229
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:232
 msgid "The list of Google fonts is long! You can %s before making your choices."
 msgstr ""
 
-#: inc/customizer.php:150
+#: inc/customizer.php:236
 msgid "preview"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:256
 msgid "Body Font"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:275
 msgid "Header Font"
 msgstr ""
 
-#: inc/customizer.php:190
+#: inc/customizer.php:294
 msgid "Character Subset"
 msgstr ""
 
-#: inc/customizer.php:195
+#: inc/customizer.php:299
 msgid "Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font."
 msgstr ""
 
-#: inc/customizer.php:199
+#: inc/customizer.php:303
 msgid "Google Fonts website"
 msgstr ""
 
-#: inc/customizer.php:246
+#: inc/customizer.php:376
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:388
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:400
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:282
+#: inc/customizer.php:412
 msgid "Green"
 msgstr ""
 
-#: inc/customizer.php:294
+#: inc/customizer.php:424
 msgid "Yellow"
 msgstr ""
 
-#: inc/customizer.php:306
+#: inc/customizer.php:436
 msgid "Blue"
 msgstr ""
 
@@ -220,17 +220,17 @@ msgstr ""
 msgid "Monospace Fonts (Google)"
 msgstr ""
 
-#: inc/helper-fonts.php:354
+#: inc/helper-fonts.php:363
 msgctxt "font style"
 msgid "Serif"
 msgstr ""
 
-#: inc/helper-fonts.php:358
+#: inc/helper-fonts.php:367
 msgctxt "font style"
 msgid "Sans Serif"
 msgstr ""
 
-#: inc/helper-fonts.php:362
+#: inc/helper-fonts.php:371
 msgctxt "font style"
 msgid "Monospaced"
 msgstr ""
