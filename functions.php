@@ -141,7 +141,7 @@ add_action( 'after_setup_theme', 'raiden_setup' );
  * @global int $content_width
  */
 function raiden_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'raiden_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'raiden_content_width', 670 );
 }
 add_action( 'after_setup_theme', 'raiden_content_width', 0 );
 
@@ -231,7 +231,7 @@ function raiden_scripts() {
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/css/genericons/genericons.css', array(), '3.4.1' );
 	$style_dependencies[] = 'genericons';
 
-	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies );
+	wp_enqueue_style( 'raiden-style', get_stylesheet_uri(), $style_dependencies, RAIDEN_VERSION );
 
 	wp_enqueue_script( 'raiden-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20151215', true );
 
