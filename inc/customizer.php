@@ -207,7 +207,7 @@ add_action( 'customize_register', 'raiden_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function raiden_customize_preview_js() {
-	wp_enqueue_script( 'raiden_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'raiden_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), RAIDEN_VERSION, true );
 }
 add_action( 'customize_preview_init', 'raiden_customize_preview_js' );
 
@@ -219,8 +219,31 @@ add_action( 'customize_preview_init', 'raiden_customize_preview_js' );
  * @since Raiden 1.0
  */
 function raiden_customize_control_js() {
-	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/assets/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160604', true );
+	wp_enqueue_style( 'select2-css', get_template_directory_uri() . '/assets/css/select2/select2.min.css', array(), '4.0.13' );
+
+	// Attach Select2 Customizer Z-index patch.
+	wp_add_inline_style(
+		'select2-css',
+		'.select2-container {
+					z-index: 600000;
+				}
+			'
+	);
+
+	wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/assets/js/select2/select2.min.js', array( 'jquery' ), '4.0.13', true );
+
+	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/assets/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util', 'jquery', 'select2-js' ), RAIDEN_VERSION, true );
+
 	wp_localize_script( 'color-scheme-control', 'colorScheme', raiden_get_color_schemes() );
+
+	// Localize the font options data.
+	wp_localize_script(
+		'color-scheme-control',
+		'raidenCustomizerSettings',
+		array(
+			'fontOptions' => raiden_get_font_property_option_keys(),
+		)
+	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'raiden_customize_control_js' );
 

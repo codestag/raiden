@@ -4,7 +4,49 @@
  * Also trigger an update of the Color Scheme CSS when a color is changed.
  */
 
-( function( api ) {
+( function( api, $ ) {
+
+	/**
+	 * Font Choices
+	 */
+	const fontChoices = {
+		cache: {},
+
+		init: function () {
+			fontChoices.cache.options = {};
+			$.each(
+				raidenCustomizerSettings.fontOptions,
+				function ( index, key ) {
+					fontChoices.cache.options[key] = $( 'select', '#customize-control-' + key );
+				}
+			);
+
+			// Insert.
+			fontChoices.insertChoices();
+		},
+
+		// Insert the HTML into each font family select.
+		insertChoices: function () {
+			$.each(
+				fontChoices.cache.options,
+				function ( key, element ) {
+					element.select2(
+						{
+							width: '100%',
+						}
+					);
+				}
+			);
+		},
+	};
+
+	// Load font choices after Customizer initialization is complete.
+	$( document ).ready(
+		function () {
+			fontChoices.init();
+		}
+	);
+
 	var cssTemplate = wp.template('raiden-color-scheme'),
 		colorSchemeKeys = [
 			'background_color',
@@ -106,4 +148,4 @@
 			setting.bind( updateCSS );
 		} );
 	} );
-} )( wp.customize );
+} )( wp.customize, jQuery );

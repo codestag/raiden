@@ -365,3 +365,16 @@ function raiden_get_standard_fonts() {
 	);
 }
 endif;
+
+if ( ! function_exists( 'raiden_get_font_property_option_keys' ) ) :
+	/**
+	 * Return all the option keys for the specified font property.
+	 *
+	 * @since  1.2.1.
+	 *
+	 * @return array                  Array of matching font option keys.
+	 */
+	function raiden_get_font_property_option_keys() {
+		return array( 'raiden_body_font', 'raiden_header_font', 'raider_font_subset' );
+	}
+endif;
