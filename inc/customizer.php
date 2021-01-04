@@ -279,11 +279,11 @@ function raiden_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header Font selector.
+	// Google Font Subset selector.
 	$wp_customize->add_setting(
 		'raider_font_subset',
 		array(
-			'default'           => '13',
+			'default'           => '17',
 			'sanitize_callback' => 'sanitize_text_field',
 			'transport'         => 'refresh',
 		)
