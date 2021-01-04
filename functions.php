@@ -194,12 +194,10 @@ function raiden_block_editor_styles() {
 	wp_add_inline_style(
 		'raiden-google-fonts',
 		"
-		.edit-post-layout__content {
+		.editor-styles-wrapper {
 			--link-color: {$link_color};
 			--text-color: {$text_color};
 			--content-bg-color: {$content_bg_color};
-		}
-		.edit-post-visual-editor {
 			--font-body: '{$font_body}';
 			--font-header: '{$font_header}';
 		}"
