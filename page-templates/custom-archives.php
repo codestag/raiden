@@ -11,8 +11,8 @@ get_header(); ?>
 
 		<header class="page-header archive-page-title">
 			<h1 class="page-title">
-				<span><?php _e( 'Page:', 'raiden' ); ?></span>
-				<?php _e( 'Archive', 'raiden' ); ?>
+				<span><?php esc_html_e( 'Page:', 'raiden' ); ?></span>
+				<?php esc_html_e( 'Archive', 'raiden' ); ?>
 			</h1>
 		</header>
 
@@ -20,23 +20,27 @@ get_header(); ?>
 
 			<section class="custom-archive-widgets">
 				<div class="archive-widget custom-recent-posts">
-					<h2 class="widget-title"><?php esc_attr_e( 'Latest Posts', 'raiden' ); ?></h2>
+					<h2 class="widget-title"><?php esc_html_e( 'Latest Posts', 'raiden' ); ?></h2>
 
 					<?php
 
 					rewind_posts();
 
-					$q = new WP_Query( array(
-						'post_type'           => 'post',
-						'post_status'         => 'publish',
-						'posts_per_page'      => '5',
-						'ignore_sticky_posts' => true,
-					) );
+					$q = new WP_Query(
+						array(
+							'post_type'           => 'post',
+							'post_status'         => 'publish',
+							'posts_per_page'      => '5',
+							'ignore_sticky_posts' => true,
+						)
+					);
 
 					if ( $q->have_posts() ) :
 						echo '<ul class="custom-widget custom-post-list">';
 
-						while ( $q->have_posts() ) : $q->the_post(); ?>
+						while ( $q->have_posts() ) :
+							$q->the_post();
+							?>
 						<li>
 							<h2 class="entry-title">
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -45,7 +49,8 @@ get_header(); ?>
 								<?php raiden_posted_on(); ?>
 							</div>
 						</li>
-						<?php endwhile;
+							<?php
+						endwhile;
 
 						echo '</ul>';
 					endif;
@@ -53,20 +58,28 @@ get_header(); ?>
 				</div>
 
 				<?php
-					the_widget( 'WP_Widget_Categories', 'count=0', array(
-						'before_widget' => '<div class="archive-widget custom-categories">',
-						'after_widget'  => '</div>',
-						'before_title'  => '<h2 class="widget-title">',
-						'after_title'   => '</h2>',
-					) );
+					the_widget(
+						'WP_Widget_Categories',
+						'count=0',
+						array(
+							'before_widget' => '<div class="archive-widget custom-categories">',
+							'after_widget'  => '</div>',
+							'before_title'  => '<h2 class="widget-title">',
+							'after_title'   => '</h2>',
+						)
+					);
 
-					the_widget( 'WP_Widget_Tag_Cloud', '', array(
-						'before_widget' => '<div class="archive-widget custom-tags">',
-						'after_widget'  => '</div>',
-						'before_title'  => '<h2 class="widget-title">',
-						'after_title'   => '</h2>',
-					) );
-				?>
+					the_widget(
+						'WP_Widget_Tag_Cloud',
+						'',
+						array(
+							'before_widget' => '<div class="archive-widget custom-tags">',
+							'after_widget'  => '</div>',
+							'before_title'  => '<h2 class="widget-title">',
+							'after_title'   => '</h2>',
+						)
+					);
+					?>
 			</section>
 
 		</main>

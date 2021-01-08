@@ -13,9 +13,24 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raiden' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'raiden' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">
+									<?php
+									printf(
+										/* translators: %s: WordPress */
+										esc_html__( 'Proudly powered by %s', 'raiden' ),
+										'WordPress'
+									);
+									?>
+						</a>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'raiden' ), 'Raiden', '<a href="https://codestag.com" rel="designer">Codestag</a>' ); ?>
+				<?php
+				printf(
+					'%1$s by <a href="%2$s" rel="designer">%3$s</a>.',
+					'Theme: Raiden',
+					esc_url( 'https://codestag.com' ),
+					'Codestag'
+				);
+				?>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 
