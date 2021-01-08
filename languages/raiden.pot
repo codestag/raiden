@@ -56,16 +56,9 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:16
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:16
+#. translators: %s: WordPress
+#: footer.php:20
 msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:18
-msgid "Theme: %1$s by %2$s."
 msgstr ""
 
 #: functions.php:72
@@ -80,7 +73,7 @@ msgstr ""
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: header.php:25
+#: header.php:26
 msgid "Skip to content"
 msgstr ""
 
@@ -164,35 +157,36 @@ msgstr ""
 msgid "Character Subset"
 msgstr ""
 
-#: inc/customizer.php:299
+#. translators: %s: Google fonts website
+#: inc/customizer.php:300
 msgid "Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font."
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:307
 msgid "Google Fonts website"
 msgstr ""
 
-#: inc/customizer.php:376
+#: inc/customizer.php:380
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:388
+#: inc/customizer.php:392
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:400
+#: inc/customizer.php:404
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:412
+#: inc/customizer.php:416
 msgid "Green"
 msgstr ""
 
-#: inc/customizer.php:424
+#: inc/customizer.php:428
 msgid "Yellow"
 msgstr ""
 
-#: inc/customizer.php:436
+#: inc/customizer.php:440
 msgid "Blue"
 msgstr ""
 
@@ -416,84 +410,4 @@ msgstr ""
 
 #: template-parts/content-none.php:21
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: inc/updater/theme-updater.php:26
-msgid "Theme License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:27
-msgid "Enter your theme license key."
-msgstr ""
-
-#: inc/updater/theme-updater.php:28
-msgid "License Key"
-msgstr ""
-
-#: inc/updater/theme-updater.php:29
-msgid "License Action"
-msgstr ""
-
-#: inc/updater/theme-updater.php:30
-msgid "Deactivate License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:31
-msgid "Activate License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:32, inc/updater/theme-updater.php:44
-msgid "License status is unknown."
-msgstr ""
-
-#: inc/updater/theme-updater.php:33
-msgid "Renew?"
-msgstr ""
-
-#: inc/updater/theme-updater.php:34
-msgid "unlimited"
-msgstr ""
-
-#: inc/updater/theme-updater.php:35
-msgid "License key is active."
-msgstr ""
-
-#: inc/updater/theme-updater.php:36
-msgid "Expires %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:37
-msgid "You have %1$s / %2$s sites activated."
-msgstr ""
-
-#: inc/updater/theme-updater.php:38
-msgid "License key expired %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:39
-msgid "License key has expired."
-msgstr ""
-
-#: inc/updater/theme-updater.php:40
-msgid "License keys do not match."
-msgstr ""
-
-#: inc/updater/theme-updater.php:41
-msgid "License is inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:42
-msgid "License key is disabled."
-msgstr ""
-
-#: inc/updater/theme-updater.php:43
-msgid "Site is inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:45
-msgid "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update."
-msgstr ""
-
-#: inc/updater/theme-updater.php:46
-msgid "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
 msgstr ""
