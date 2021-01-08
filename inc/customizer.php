@@ -296,7 +296,11 @@ function raiden_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'choices'     => raiden_get_google_font_subsets(),
 			'description' => sprintf(
-				esc_html__( 'Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font.', 'raiden' ),
+				/* translators: %s: Google fonts website */
+				esc_html__(
+					'Not all fonts provide each of these subsets. Please visit the %s to see which subsets are available for each font.',
+					'raiden'
+				),
 				sprintf(
 					'<a href="%1$s" target="_blank">%2$s</a>',
 					esc_url( 'https://fonts.google.com' ),
@@ -574,6 +578,7 @@ function raiden_google_fonts_css() {
 	body {
 		font-family: {$body_font},"Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
+
 	/* Header Font */
 	h1, h2, h3, h4, h5, h6 {
 		font-family: {$header_font},Georgia,Times,"Times New Roman",serif;
@@ -679,7 +684,7 @@ function raiden_color_scheme_css_template() {
 	);
 	?>
 	<script type="text/html" id="tmpl-raiden-color-scheme">
-		<?php echo raiden_get_color_scheme_css( $colors ); ?>
+		<?php echo raiden_get_color_scheme_css( $colors ); // phpcs:ignore ?>
 	</script>
 	<?php
 }
