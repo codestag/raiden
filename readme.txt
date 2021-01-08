@@ -27,8 +27,9 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal License: 
 
 == Changelog ==
 
-## 1.2.2 - January 07, 2021
-* Revise for a free release
+## 1.2.2 - January 08, 2021
+* Revised for free release
+* Add wp_body_open hook
 * Other minor improvements
 
 ## 1.2.1 - January 04, 2021
