@@ -7,6 +7,43 @@
  * @package Raiden
  */
 
+if ( ! function_exists( 'raiden_fs' ) ) {
+	// Create a helper function for easy SDK access.
+	function raiden_fs() {
+		global $raiden_fs;
+
+		if ( ! isset( $raiden_fs ) ) {
+			// Include Freemius SDK.
+			require_once dirname( __FILE__ ) . '/freemius/start.php';
+
+			$raiden_fs = fs_dynamic_init(
+				array(
+					'id'               => '7655',
+					'slug'             => 'raiden',
+					'type'             => 'theme',
+					'public_key'       => 'pk_095bcb0dea0807a93fa6f3e4b6e4f',
+					'is_premium'       => false,
+					'has_addons'       => false,
+					'has_paid_plans'   => false,
+					'is_org_compliant' => false,
+					'menu'             => array(
+						'first-path' => 'themes.php',
+						'account'    => false,
+						'support'    => false,
+					),
+				)
+			);
+		}
+
+		return $raiden_fs;
+	}
+
+	// Init Freemius.
+	raiden_fs();
+	// Signal that SDK was initiated.
+	do_action( 'raiden_fs_loaded' );
+}
+
 /**
  * The current version of the theme.
  */
