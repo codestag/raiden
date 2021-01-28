@@ -61,15 +61,15 @@ msgstr ""
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:109
 msgid "Primary"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:193
 msgid "Widget Area"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:195
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 

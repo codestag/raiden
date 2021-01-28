@@ -1,5 +1,9 @@
 ### Raiden Changelog
 
+## 1.2.3 - January 27, 2021
+* Add Freemius SDK
+* Other minor improvemnets
+
 ## 1.2.2 - January 08, 2021
 * Revised for free release
 * Add wp_body_open hook

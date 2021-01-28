@@ -1,6 +1,6 @@
 === Raiden ===
 Contributors: codestag
-Requires at least: 5.6
+Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -26,6 +26,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal License: MIT Source: https://necolas.github.io/normalize.css/
 
 == Changelog ==
+
+## 1.2.3 - January 27, 2021
+* Add Freemius SDK
+* Other minor improvemnets
 
 ## 1.2.2 - January 08, 2021
 * Revised for free release
